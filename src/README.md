@@ -1,3 +1,10 @@
+# Testbench
+
+## Relu
+```json=
+ncverilog test.v CPU.v 
+```
+
 # Functionality Introduction
 
 ## 1. MUX32 
