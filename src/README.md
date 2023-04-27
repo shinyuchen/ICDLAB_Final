@@ -105,6 +105,14 @@ ncverilog test.v CPU.v +define+MP
     rs1   : Relu input
     rd    : Relu output
 
+## 2. MaxPooling
+    Instruction code:
+    funct7: 1100000
+    funct3: 111
+    opcode: 0110011
+    rs1   : MaxPooling input
+    rd    : MaxPooling output
+    
 ## Some ideas: Layer Registers (Including input, weight)
     Can we spare read/write address and I/O processing time? (as output of hidden layers are not necessarily important)
     If we can clearly constrain and point out where does the required sequence locate, we don't need to search them with read/write register address.
