@@ -38,7 +38,7 @@ always@(*)begin
                 ALUCtrl_o = 4'b0111;// Relu
             end
             10'b1100000111 : begin
-                ALUCtrl_o = 4'b1000;// Relu
+                ALUCtrl_o = 4'b1000;// MaxPool
             end
             default : begin
                 ALUCtrl_o = 4'b0001;
