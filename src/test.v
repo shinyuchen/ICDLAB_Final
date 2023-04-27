@@ -61,6 +61,10 @@ initial begin
         $readmemb("../dat/test_MaxPool.txt", instr_store);
         $readmemh("../dat/test_MaxPool_golden.txt",golden);
     `endif
+    `ifdef FC
+        $readmemb("../dat/test_FC.txt", instr_store);
+        $readmemh("../dat/test_FC_golden.txt",golden);
+    `endif
     // Open output file
     outfile = $fopen("../dat/output.txt") | 1;
     
@@ -115,6 +119,22 @@ initial begin
                 if((j%4==0)&&(j!=0))address = address + 5'd1;
                 if(j%8 == 0 ) $display("Before MaxPooling:");
                 else if(j%4 == 0) $display("After MaxPooling:");
+                @(posedge Clk);
+                vout_addr = vout_addr - 2'b1;
+                // $display("IS_POSITIVE: %b", is_positive);
+                if(value_o !== golden[j])begin
+                    err = err + 1;
+                    $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
+                end
+                else begin
+                    $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
+                end
+            end
+        `endif
+        `ifdef FC
+            for(j=0;j<4;j=j+1)begin
+                if((j%4==0)&&(j!=0))address = address + 5'd1;
+                else if(j%4 == 0) $display("FC Result:");
                 @(posedge Clk);
                 vout_addr = vout_addr - 2'b1;
                 // $display("IS_POSITIVE: %b", is_positive);

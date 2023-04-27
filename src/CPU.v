@@ -32,6 +32,10 @@ module CPU
     is_positive,
     easter_egg
 );
+//------------------------- Parameter -------------------------------//
+parameter FC_BITWIDTH       = 8;
+parameter FC_INPUT_SIZE     = 4;
+parameter FC_OUTPUT_SIZE    = 2;
 
 //------------------------- I/O Ports -------------------------------//
 
@@ -124,7 +128,7 @@ wire [31:0] VALU_v_o, EX_MEM_VALUResult_o, aluToDM_data_o; //NEW
 wire toDataMemory; //NEW: used in MUX32 aluToDM
 wire [2:0] VALU_Control_VALUCtrl_o;
 wire [3:0] is_positive_line;
-
+wire [FC_BITWIDTH * FC_INPUT_SIZE * FC_OUTPUT_SIZE - 1 : 0] weight_reg;
 reg               flag;
 reg               start_i;
 reg [3:0] vector_signed [0:2];
@@ -254,11 +258,12 @@ Instruction_Memory Instruction_Memory(
 
 //AddSum was in EX stage initally, but moved to IF stage.
 ALU AddSum(
-    .data1_i    (IF_ID_pc_o),
-    .data2_i    (shiftLeft_data_o),
-    .ALUCtrl_i  (3'b001),
-    .data_o     (AddSum_data_o),
-    .Zero_o     ()
+    .weight_matrix  (),
+    .data1_i        (IF_ID_pc_o),
+    .data2_i        (shiftLeft_data_o),
+    .ALUCtrl_i      (3'b001),
+    .data_o         (AddSum_data_o),
+    .Zero_o         ()
 );
 
 //the following two function is for branch judgement
@@ -312,7 +317,8 @@ Registers Registers(
     .RSdata_o   (Registers_RSdata_o),                  //to ID_EX.RDData0_i
     .RTdata_o   (Registers_RTdata_o),                  //to ID_EX.RDData1_i
     .reg_o      (reg_o),
-    .pos_o      (is_positive_line)
+    .pos_o      (is_positive_line),
+    .weight_matrix_o(weight_reg)
 );
 
 
@@ -374,11 +380,12 @@ ALU_Control ALU_Control(
 );
 
 ALU ALU(
-    .data1_i    (ForwardToData1_data_o),
-    .data2_i    (MUX_ALUSrc_data_o),
-    .ALUCtrl_i  (ALU_Control_ALUCtrl_o),
-    .data_o     (ALU_data_o),         //to EX_MEM.ALUResult_i    &    EX_MEM.RDaddr_i
-    .Zero_o     (ALU_Zero_o)          //to EX_MEM.zero_i
+    .weight_matrix  (weight_reg), 
+    .data1_i        (ForwardToData1_data_o),
+    .data2_i        (MUX_ALUSrc_data_o),
+    .ALUCtrl_i      (ALU_Control_ALUCtrl_o),
+    .data_o         (ALU_data_o),         //to EX_MEM.ALUResult_i    &    EX_MEM.RDaddr_i
+    .Zero_o         (ALU_Zero_o)          //to EX_MEM.zero_i
 );
 
 HazradDetect HazradDetect(

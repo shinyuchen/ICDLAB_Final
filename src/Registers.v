@@ -1,4 +1,8 @@
-module Registers
+module Registers #(
+    parameter FC_BITWIDTH     = 8, 
+    parameter FC_INPUT_SIZE   = 4, 
+    parameter FC_OUTPUT_SIZE  = 2
+)
 (
     clk_i,
     reset,
@@ -12,7 +16,8 @@ module Registers
     RSdata_o, 
     RTdata_o,
     reg_o,
-    pos_o
+    pos_o,
+    weight_matrix_o
 );
 integer i;
 // Ports
@@ -29,14 +34,16 @@ output  [31:0]      RSdata_o;
 output  [31:0]      RTdata_o;
 output  [31:0]       reg_o;
 output  [3:0]       pos_o;
+output  [FC_BITWIDTH * FC_INPUT_SIZE * FC_OUTPUT_SIZE - 1 : 0] weight_matrix_o;
 // Register File
 reg     [31:0]      register        [0:31];
 reg     [3:0]       pos             [0:31];
 // Read Data      
-assign  RSdata_o = register[RSaddr_i];
-assign  RTdata_o = register[RTaddr_i];
-assign  reg_o    = register[op_address];
-assign  pos_o    = pos[op_address];
+assign  RSdata_o        = register[RSaddr_i];
+assign  RTdata_o        = register[RTaddr_i];
+assign  reg_o           = register[op_address];
+assign  pos_o           = pos[op_address];
+assign  weight_matrix_o = {register[25], register[26]};
 // Write Data
 
 always@(negedge clk_i or posedge reset)begin
@@ -51,6 +58,15 @@ always@(negedge clk_i or posedge reset)begin
             for(i=0;i< 2;i=i+1)register[i] <= 0;
             for(i=5;i<32;i=i+1)register[i] <= 0;
             for(i=0;i<32;i=i+1)pos[i]      <= 0;
+        `elsif FC
+            register[ 4] <= 32'h07_53_32_0c; // input
+            register[ 3] <= 32'hff_7f_00_00; // bias (only the first two quarters will be read)
+            register[25] <= 32'h17_43_03_0f; // matrix row 1
+            register[26] <= 32'h08_78_5b_1f; // matrix row 2
+            for(i= 0;i< 3;i=i+1)register[i] <= 0;
+            for(i= 5;i<25;i=i+1)register[i] <= 0;
+            for(i=27;i<32;i=i+1)register[i] <= 0;
+            for(i= 0;i<32;i=i+1)pos[i]      <= 0;
         `else
             for(i=0;i<32;i=i+1)register[i] <= 0;
             for(i=0;i<32;i=i+1)pos[i]      <= 0;

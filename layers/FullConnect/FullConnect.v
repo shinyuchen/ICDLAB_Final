@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+`include "../layers/FullConnect/Mult.v"
 module FullConnect#(
     parameter BITWIDTH = 8, 
     parameter INPUT_SIZE = 7, 

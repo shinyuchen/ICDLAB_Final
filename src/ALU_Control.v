@@ -40,6 +40,9 @@ always@(*)begin
             10'b1100000111 : begin
                 ALUCtrl_o = 4'b1000;// MaxPool
             end
+            10'b1110000111 : begin
+                ALUCtrl_o = 4'b1001;// FC
+            end
             default : begin
                 ALUCtrl_o = 4'b0001;
             end
