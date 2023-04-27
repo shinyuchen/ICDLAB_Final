@@ -1,3 +1,22 @@
+# 新增自定義instruction流程
+    也可以直接參考Relu跟MaxPooling是怎麼做的
+    
+## (1) ALU_Control.v
+    加入自定義的instruction code
+
+## (2) ALU.v
+    宣告Submodule的instance並且在case裡面新增output選項
+
+## (3) Control.v （不需要更改，只需要參考你的instruction要用哪一種opcode）
+    要根據你的指令操作來決定CPU的各個option （如WriteBack）是否要被觸發，
+    例如relu本質上只會用到rs1跟rd, 跟addi一樣，所以可以直接把opcode設成跟addi一樣
+
+## (4) test.v
+    可以直接參考學長寫的testbench.v會比較清楚，簡單整理如下：
+    (1)我已經把檢驗的register設為r2, r3, r4, r5，所以可以想辦法把input value跟output value塞在這幾個registers裡面
+    (2)剩下的可以看test.v裡面line 96~112的註解
+    (3)在directory ./dat中新增test.txt跟test_golden.txt
+
 # Testbench
 
 ## Relu
@@ -112,7 +131,7 @@ ncverilog test.v CPU.v +define+MP
     opcode: 0110011
     rs1   : MaxPooling input
     rd    : MaxPooling output
-    
+
 ## Some ideas: Layer Registers (Including input, weight)
     Can we spare read/write address and I/O processing time? (as output of hidden layers are not necessarily important)
     If we can clearly constrain and point out where does the required sequence locate, we don't need to search them with read/write register address.

@@ -94,12 +94,12 @@ initial begin
      $display("--------------------------- [ Simulation Starts !! ] ---------------------------");
         #(`CYCLE_TIME*234);
         `ifdef Relu
-            for(j=0;j<16;j=j+1)begin
-                if((j%4==0)&&(j!=0))address = address + 5'd1;
-                if(j%8 == 0 ) $display("Before Relu:");
+            for(j=0;j<16;j=j+1)begin // j=0 means the Most Significant 8-bit of r2, j=1 means the 23~16 bits of r2, and so on.
+                if((j%4==0)&&(j!=0))address = address + 5'd1; // for every 4 cycles, one register is traversed and jump to the next
+                if(j%8 == 0 ) $display("Before Relu:"); 
                 else if(j%4 == 0) $display("After Relu:");
                 @(posedge Clk);
-                vout_addr = vout_addr - 2'b1;
+                vout_addr = vout_addr - 2'b1; // does the job that line 97 describes
                 // $display("IS_POSITIVE: %b", is_positive);
                 if(value_o !== golden[j])begin
                     err = err + 1;
