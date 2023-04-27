@@ -41,8 +41,20 @@ assign  pos_o    = pos[op_address];
 
 always@(negedge clk_i or posedge reset)begin
     if(reset) begin
-        for(i=0;i<32;i=i+1)register[i] <= 0;
-        for(i=0;i<32;i=i+1)pos[i]      <= 0;
+        // for(i=0;i<32;i=i+1)register[i] <= 0;
+        // for(i=0;i<32;i=i+1)pos[i]      <= 0;
+
+        `ifdef MP
+            register[2] <= 32'hff_ee_11_00;
+            register[3] <= 32'h00_00_00_00;
+            register[4] <= 32'h7f_ff_e3_11;
+            for(i=0;i< 2;i=i+1)register[i] <= 0;
+            for(i=5;i<32;i=i+1)register[i] <= 0;
+            for(i=0;i<32;i=i+1)pos[i]      <= 0;
+        `else
+            for(i=0;i<32;i=i+1)register[i] <= 0;
+            for(i=0;i<32;i=i+1)pos[i]      <= 0;
+        `endif
     end  
 
     else  begin

@@ -6,48 +6,51 @@ module ALU_Control(
 
 input [9:0] funct_i;    //funct7[9:3]+funct3[2:0]
 input [1:0] ALUOp_i;    //00 for addi
-output reg[2:0] ALUCtrl_o;
+output reg[3:0] ALUCtrl_o;
 
 always@(*)begin
 
   case(ALUOp_i)
 
     2'b11 : begin
-        ALUCtrl_o = 3'b001;//add
+        ALUCtrl_o = 4'b0001;//add
     end
 
     2'b10 : begin
         case(funct_i)
 
             10'b0000000000 : begin
-                ALUCtrl_o = 3'b001;//add
+                ALUCtrl_o = 4'b0001;//add
             end
             10'b0100000000 : begin
-                ALUCtrl_o = 3'b010;//sub
+                ALUCtrl_o = 4'b0010;//sub
             end
             10'b0000001000 : begin
-                ALUCtrl_o = 3'b110;//MUL
+                ALUCtrl_o = 4'b0110;//MUL
             end
             10'b0000000110 : begin
-                ALUCtrl_o = 3'b100;//OR
+                ALUCtrl_o = 4'b0100;//OR
             end
             10'b0000000111 : begin
-                ALUCtrl_o = 3'b011;//AND
+                ALUCtrl_o = 4'b0011;//AND
             end
             10'b1000000111 : begin
-                ALUCtrl_o = 3'b111;// Relu
+                ALUCtrl_o = 4'b0111;// Relu
+            end
+            10'b1100000111 : begin
+                ALUCtrl_o = 4'b1000;// Relu
             end
             default : begin
-                ALUCtrl_o = 3'b001;
+                ALUCtrl_o = 4'b0001;
             end
         endcase
     end
 
     2'b01 : begin //beq,ALU do subtraction
-    ALUCtrl_o = 3'b010;//sub
+    ALUCtrl_o = 4'b0010;//sub
     end
     default : begin
-        ALUCtrl_o = 3'b001;
+        ALUCtrl_o = 4'b0001;
     end
 endcase
 

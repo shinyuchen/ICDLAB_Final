@@ -1,0 +1,15 @@
+//Initialization
+00000000
+11111110 // instruction start
+
+11000000
+00000001
+01110001
+10110011 // r3 = MaxPool(r2)
+
+11000000
+00000010
+01110010
+10110011 // r5 = MaxPool(r4)
+
+11111111 // instruction end

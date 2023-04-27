@@ -83,7 +83,7 @@ wire        ID_EX_ALUSrc_o;
 wire [1:0]  ID_EX_ALUOp_o;
 wire [31:0] ForwardToData1_data_o;
 wire [31:0] MUX_ALUSrc_data_o;
-wire [2:0]  ALU_Control_ALUCtrl_o;
+wire [3:0]  ALU_Control_ALUCtrl_o;
 wire        ID_EX_MemRead_o;
 wire [1:0]  Control_ALUOp_o;
 wire        Control_ALUSrc_o;

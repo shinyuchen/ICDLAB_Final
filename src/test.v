@@ -53,8 +53,14 @@ initial begin
     instr_i = 0;
     for(k=0;k < (64*4+1) ;k=k+1) instr_store[k] = 0;
     // Load instructions into instruction memory
-    $readmemb("../dat/test.txt", instr_store);
-    $readmemh("../dat/test_golden.txt",golden);
+    `ifdef Relu
+        $readmemb("../dat/test_relu.txt", instr_store);
+        $readmemh("../dat/test_relu_golden.txt",golden);
+    `endif
+    `ifdef MP
+        $readmemb("../dat/test_MaxPool.txt", instr_store);
+        $readmemh("../dat/test_MaxPool_golden.txt",golden);
+    `endif
     // Open output file
     outfile = $fopen("../dat/output.txt") | 1;
     
@@ -87,21 +93,40 @@ initial begin
     j =0 ;
      $display("--------------------------- [ Simulation Starts !! ] ---------------------------");
         #(`CYCLE_TIME*234);
-        for(j=0;j<16;j=j+1)begin
-            if((j%4==0)&&(j!=0))address = address + 5'd1;
-            if(j%8 == 0 ) $display("Before Relu:");
-            else if(j%4 == 0) $display("After Relu:");
-            @(posedge Clk);
-            vout_addr = vout_addr - 2'b1;
-            // $display("IS_POSITIVE: %b", is_positive);
-            if(value_o !== golden[j])begin
-                 err = err + 1;
-                 $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
+        `ifdef Relu
+            for(j=0;j<16;j=j+1)begin
+                if((j%4==0)&&(j!=0))address = address + 5'd1;
+                if(j%8 == 0 ) $display("Before Relu:");
+                else if(j%4 == 0) $display("After Relu:");
+                @(posedge Clk);
+                vout_addr = vout_addr - 2'b1;
+                // $display("IS_POSITIVE: %b", is_positive);
+                if(value_o !== golden[j])begin
+                    err = err + 1;
+                    $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
+                end
+                else begin
+                    $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
+                end
             end
-            else begin
-                 $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
+        `endif
+        `ifdef MP
+            for(j=0;j<16;j=j+1)begin
+                if((j%4==0)&&(j!=0))address = address + 5'd1;
+                if(j%8 == 0 ) $display("Before MaxPooling:");
+                else if(j%4 == 0) $display("After MaxPooling:");
+                @(posedge Clk);
+                vout_addr = vout_addr - 2'b1;
+                // $display("IS_POSITIVE: %b", is_positive);
+                if(value_o !== golden[j])begin
+                    err = err + 1;
+                    $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
+                end
+                else begin
+                    $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
+                end
             end
-        end
+        `endif
         #(`CYCLE_TIME*2); 
      $display("--------------------------- Simulation Stops !!---------------------------");
      if (err) begin 

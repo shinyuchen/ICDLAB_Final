@@ -2,7 +2,12 @@
 
 ## Relu
 ```json=
-ncverilog test.v CPU.v 
+ncverilog test.v CPU.v +define+Relu
+```
+
+## MaxPooling
+```json=
+ncverilog test.v CPU.v +define+MP
 ```
 
 # Functionality Introduction
@@ -92,6 +97,14 @@ ncverilog test.v CPU.v
 
 # Self-defined Modules
 
-## 1. Layer Registers (Including input, weight)
+## 1. Relu
+    Instruction code:
+    funct7: 1000000
+    funct3: 111
+    opcode: 0110011
+    rs1   : Relu input
+    rd    : Relu output
+
+## Some ideas: Layer Registers (Including input, weight)
     Can we spare read/write address and I/O processing time? (as output of hidden layers are not necessarily important)
     If we can clearly constrain and point out where does the required sequence locate, we don't need to search them with read/write register address.
