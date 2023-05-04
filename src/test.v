@@ -69,6 +69,12 @@ initial begin
         $readmemb("../dat/test_Conv.txt", instr_store);
         $readmemh("../dat/test_Conv_golden.txt",golden);
     `endif
+    `ifdef BN
+        $readmemb("../dat/test_BN.txt", instr_store);
+        $readmemh("../dat/test_BN_golden.txt",golden);
+        address = 5'd2; // r2
+        vout_addr = 2'b00;
+    `endif
     // Open output file
     outfile = $fopen("../dat/output.txt") | 1;
     
@@ -158,6 +164,22 @@ initial begin
                 @(posedge Clk);
                 vout_addr = vout_addr - 2'b1;
                 // $display("IS_POSITIVE: %b", is_positive);
+                if(value_o !== golden[j])begin
+                    err = err + 1;
+                    $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
+                end
+                else begin
+                    $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
+                end
+            end
+        `endif
+        `ifdef BN
+            // #(`CYCLE_TIME );
+            for(j=0;j<2;j=j+1)begin
+                if(j==1)address = address + 5'd1;
+                // vout_addr = 2'b00;
+                @(posedge Clk);
+                $display(value_o);
                 if(value_o !== golden[j])begin
                     err = err + 1;
                     $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
