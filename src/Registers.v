@@ -35,8 +35,8 @@ output  [31:0]       reg_o;
 output  [3:0]       pos_o;
 output  reg [FC_BITWIDTH * WEIGHT_SIZE * WEIGHT_SIZE - 1 : 0] weight_matrix_o;
 // Register File
-reg     [31:0]      register        [0:15];
-reg     [3:0]       pos             [0:15];
+reg     [31:0]      register        [0:31];
+reg     [3:0]       pos             [0:31];
 // Read Data      
 assign  RSdata_o        = register[RSaddr_i];
 assign  RTdata_o        = register[RTaddr_i];
@@ -63,6 +63,8 @@ always@(negedge clk_i or posedge reset)begin
             for(i=0;i< 2;i=i+1)register[i] <= 0;
             for(i=5;i<16;i=i+1)register[i] <= 0;
             for(i=0;i<16;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)register[i] <= 0;
         `elsif FC
             register[ 4] <= 32'h07_53_32_0c; // input
             register[ 3] <= 32'hff_7f_00_00; // bias (only the first two quarters will be read)
@@ -72,6 +74,8 @@ always@(negedge clk_i or posedge reset)begin
             for(i= 5;i<12;i=i+1)register[i] <= 0;
             for(i=14;i<16;i=i+1)register[i] <= 0;
             for(i= 0;i<16;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)register[i] <= 0;
         `elsif Conv
             register[ 4] <= 32'h01_01_01_01; // input
             register[ 3] <= 32'h01_00_00_00; // bias 
@@ -82,9 +86,13 @@ always@(negedge clk_i or posedge reset)begin
             for(i= 0;i< 3;i=i+1)register[i] <= 0;
             for(i= 5;i<12;i=i+1)register[i] <= 0;
             for(i= 0;i<16;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)register[i] <= 0;
         `else
             for(i=0;i<16;i=i+1)register[i] <= 0;
             for(i=0;i<16;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)pos[i]      <= 0;
+            for(i=16;i<32;i=i+1)register[i] <= 0;
         `endif
     end  
 
