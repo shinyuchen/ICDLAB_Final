@@ -15,7 +15,7 @@ ncverilog test.v CPU.v +define+MP
 ncverilog test.v CPU.v +define+FC
 ```
 
-## FullyConnected
+## Batch Normalization
 ```json=
 ncverilog test.v CPU.v +define+BN
 ```
