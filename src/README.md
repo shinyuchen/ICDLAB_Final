@@ -15,6 +15,11 @@ ncverilog test.v CPU.v +define+MP
 ncverilog test.v CPU.v +define+FC
 ```
 
+## FullyConnected
+```json=
+ncverilog test.v CPU.v +define+BN
+```
+
 # 新增自定義instruction流程
     也可以直接參考Relu跟MaxPooling是怎麼做的
 

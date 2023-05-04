@@ -5,6 +5,7 @@
 `include "../layers/FullConnect/Mult.v"
 `include "../layers/Conv2d/Conv2d.v"
 `include "../layers/Conv2d/ConvKernel.v"
+`include "../layers/Batch_Norm/batch_norm.v"
 module ALU #(
     parameter BITWIDTH        = 32, 
     parameter MP_BITWIDTH     = 8, 
@@ -41,6 +42,7 @@ parameter RELU      = 4'b0111;
 parameter MaxPool   = 4'b1000;
 parameter FC        = 4'b1001;
 parameter Conv2d    = 4'b1010;
+parameter Batch_Norm= 4'b1011;
 integer   i;
 // assign data = {8'd1,8'd1,
 //               8'd1,8'd1};
@@ -95,6 +97,17 @@ Conv2d #(
   .filterBias(data2_i[31 -:MP_BITWIDTH]),
   .result(data_conv_o)
 );
+
+BN  #(
+  .BITWIDTH    (BITWIDTH), 
+  .HEIGHT      (2'd2), 
+  .WIDTH       (2'd2)
+  ) ALU_BN (
+  .data_1 (data1_i),
+  .data_2 (data2_i),
+  .result (data_BN_o)
+);
+
 /* implement here */
 always@(*)begin
 Zero_o   = (data1_i - data2_i) ? 0 : 1;
@@ -136,6 +149,10 @@ case(ALUCtrl_i)
       data_o[8*(i+1) -1 -:8] =  data_conv_o[16*(i+1) - 8-1-: 8]; 
     end
     // $display("CONV output data : %h", data_conv_o);
+  end
+  Batch_Norm: begin
+    // $display("BN output %d %d",data1_i, data2_i);
+    data_o = data_BN_o;
   end
   default : begin
     data_o = data1_i;

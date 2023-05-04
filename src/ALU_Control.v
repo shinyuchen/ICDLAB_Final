@@ -46,6 +46,9 @@ always@(*)begin
             10'b1111000111 : begin
                 ALUCtrl_o = 4'b1010;// Conv2d
             end
+            10'b1010000111 : begin
+                ALUCtrl_o = 4'b1011;// Batch Norm
+            end
             default : begin
                 ALUCtrl_o = 4'b0001;
             end
