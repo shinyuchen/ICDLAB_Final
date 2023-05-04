@@ -34,8 +34,7 @@ module CPU
 );
 //------------------------- Parameter -------------------------------//
 parameter FC_BITWIDTH       = 8;
-parameter FC_INPUT_SIZE     = 4;
-parameter FC_OUTPUT_SIZE    = 2;
+parameter WEIGHT_SIZE       = 4;
 
 //------------------------- I/O Ports -------------------------------//
 
@@ -128,7 +127,7 @@ wire [31:0] VALU_v_o, EX_MEM_VALUResult_o, aluToDM_data_o; //NEW
 wire toDataMemory; //NEW: used in MUX32 aluToDM
 wire [2:0] VALU_Control_VALUCtrl_o;
 wire [3:0] is_positive_line;
-wire [FC_BITWIDTH * FC_INPUT_SIZE * FC_OUTPUT_SIZE - 1 : 0] weight_reg;
+wire [FC_BITWIDTH * WEIGHT_SIZE * WEIGHT_SIZE - 1 : 0] weight_reg;
 reg               flag;
 reg               start_i;
 reg [3:0] vector_signed [0:2];

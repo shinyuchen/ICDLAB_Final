@@ -1,0 +1,8 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(03May2023:23:23:23):( ncverilog Conv2d_tb.v Conv2d.v )
+s2::(03May2023:23:23:45):( ncverilog Conv2d_tb.v Conv2d.v ConvKernel.v )
+s3::(03May2023:23:23:57):( ncverilog Conv2d_tb.v Conv2d.v ConvKernel.v Mult.v )
+s4::(03May2023:23:41:56):( ncverilog Conv2d_tb.v Conv2d.v ConvKernel.v Mult.v )

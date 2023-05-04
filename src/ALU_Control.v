@@ -43,6 +43,9 @@ always@(*)begin
             10'b1110000111 : begin
                 ALUCtrl_o = 4'b1001;// FC
             end
+            10'b1111000111 : begin
+                ALUCtrl_o = 4'b1010;// Conv2d
+            end
             default : begin
                 ALUCtrl_o = 4'b0001;
             end

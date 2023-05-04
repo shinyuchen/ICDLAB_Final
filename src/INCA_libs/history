@@ -1,0 +1,27 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(03May2023:23:04:43):( ncverilog test.v CPU.v +define+Conv )
+s2::(03May2023:23:05:30):( ncverilog test.v CPU.v +define+Conv )
+s3::(03May2023:23:07:11):( ncverilog test.v CPU.v +define+Conv )
+s4::(03May2023:23:08:03):( ncverilog test.v CPU.v +define+FC )
+s5::(03May2023:23:13:00):( ncverilog test.v CPU.v +define+FC )
+s6::(03May2023:23:13:12):( ncverilog test.v CPU.v +define+Conv )
+s7::(03May2023:23:16:41):( ncverilog test.v CPU.v +define+Conv )
+s8::(03May2023:23:17:55):( ncverilog test.v CPU.v +define+Conv )
+s9::(03May2023:23:18:10):( ncverilog test.v CPU.v +define+Conv )
+s10::(03May2023:23:19:15):( ncverilog test.v CPU.v +define+Conv )
+s11::(03May2023:23:20:28):( ncverilog test.v CPU.v +define+Conv )
+s12::(03May2023:23:26:58):( ncverilog test.v CPU.v +define+Conv )
+s13::(03May2023:23:28:32):( ncverilog test.v CPU.v +define+Conv )
+s14::(03May2023:23:39:10):( ncverilog test.v CPU.v +define+Conv )
+s15::(03May2023:23:45:30):( ncverilog test.v CPU.v +define+Conv )
+s16::(03May2023:23:46:30):( ncverilog test.v CPU.v +define+Conv )
+s17::(03May2023:23:48:47):( ncverilog test.v CPU.v +define+Conv )
+s18::(03May2023:23:49:27):( ncverilog test.v CPU.v +define+Conv )
+s19::(04May2023:00:17:16):( ncverilog test.v CPU.v +define+Conv )
+s20::(04May2023:00:17:51):( ncverilog test.v CPU.v +define+Conv )
+s21::(04May2023:13:43:36):( ncverilog test.v CPU.v +define+Conv )
+s22::(04May2023:13:43:48):( ncverilog test.v CPU.v +define+FC )
+s23::(04May2023:13:43:57):( ncverilog test.v CPU.v +define+MP )

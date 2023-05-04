@@ -1,0 +1,131 @@
+LatestSupportedVersion: Xcelium21.3
+ncsim 15.20-s084
+Linux 3.10.0-1160.88.1.el7.x86_64 #1 SMP Tue Mar 7 15:41:52 UTC 2023 x86_64
+CPU cores: 16
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		4096
+memorylocked	64 kbytes
+maxproc			4096
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+USER=b08012
+LOGNAME=b08012
+HOME=/home/raid7_2/userb08/b08012
+PATH=/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/spring_soft/verdi/cur/bin:/usr/spring_soft/verdi/cur/nLint/bin:/usr/mentor/calibre/cur/bin:/usr/cad/synopsys/customexplorer/cur/bin:/usr/cad/cadence/SPECTRE/cur/tools/dfII/bin:/usr/cad/cadence/SPECTRE/cur/tools/bin:/usr/cad/cadence/STRATUS/cur/tools/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cad/cadence/RC/cur/tools/bin:/usr/cad/cadence/MMSIM/cur/tools/dfII/bin:/usr/cad/cadence/MMSIM/cur/tools/bin:/usr/cad/cadence/NEOCIRCUIT/cur/tools/NeoCircuit/bin:bin.linux:/usr/cad/cadence/SPB/cur/tools/specctra/bin:/usr/cad/cadence/SPB/cur/tools/pcb/bin:/usr/cad/cadence/SPB/cur/tools/dfII/bin:/usr/cad/cadence/SPB/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/cad/cadence/IC/cur/tools/dfII/bin:/usr/cad/cadence/IC/cur/tools/dracula/bin:/usr/cad/cadence/IC/cur/tools/bin:/usr/cad/cadence/EXT/cur/tools/bin:/usr/cad/cadence/ETS/cur/tools/bin:/usr/cad/cadence/CONFRML/cur/./bin:/usr/cad/cadence/CONFRML/cur/tools/bin:/usr/cad/cadence/CCD/cur/tools/bin:/usr/cad/cadence/ASSURA/cur/tools/assura/bin:/usr/cad/cadence/ASSURA/cur/tools/dsm/bin:/usr/cad/cadence/ASSURA/cur/tools/bin:/usr/cad/cadence/ASSURA/cur/tools/dfII/bin:/usr/cad/synopsys/verdi/2022.06/bin:/usr/cad/synopsys/vera/cur/cur/bin:/usr/cad/synopsys/vcs/2022.06/amd64/bin:/usr/cad/synopsys/tmax/cur/bin:/usr/cad/synopsys/star-rcxt/cur/amd64_starrc/bin:/usr/cad/synopsys/scirocco/cur/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/bin/X11:/usr/cad/synopsys/primepower/cur/bin:/usr/cad/synopsys/pathmill/cur/amd64/pm/bin:/usr/cad/synopsys/nanosim/cur/bin:/usr/cad/synopsys/nanosim/cur/linux/ns/bin:/usr/cad/synopsys/spyglass/2022.06//SPYGLASS_HOME/bin:/usr/cad/synopsys/leda/cur/bin:/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/bin:/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/GNU/linux64/gcc/bin:/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/linux64:/usr/bin:/usr/ucb/bin:/usr/cad/synopsys/hercules/cur/bin/AMD.64:/usr/cad/synopsys/formality/cur/bin:/usr/cad/synopsys/cosmos_scope/cur/ai_bin:/usr/cad/synopsys/ccss/cur/linux/ccss/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/synopsys/astro/cur/bin/AMD.64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/raid7_4/raid1_1/linux/novas/verdi/cur/bin
+MAIL=/var/spool/mail/b08012
+SHELL=/bin/tcsh
+SSH_CLIENT=140.112.71.31 52340 22
+SSH_CONNECTION=140.112.71.31 52340 140.112.20.60 22
+SSH_TTY=/dev/pts/2
+TERM=xterm
+DISPLAY=localhost:10.0
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SELINUX_USE_CURRENT_RANGE=
+XDG_SESSION_ID=9972
+XDG_RUNTIME_DIR=/run/user/1040
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=1
+PWD=/home/raid7_2/userb08/b08012/ICDLAB/ICDLAB_Final/layers/Conv2d
+GROUP=user
+HOST=cad17
+REMOTEHOST=140.112.71.31
+HOSTNAME=cad17
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+QTLIB=/usr/lib64/qt-3.3/lib
+LM_LICENSE_FILE=26585@lstc:1717@lstc:5280@lstc:
+XKEYSYMDB=/usr/cad/synopsys/astro/cur/etc/XKeysymDB
+XLOCALEDIR=/usr/cad/synopsys/astro/cur/etc/locale
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+MANPATH=/usr/cad/synopsys/primepower/cur/doc/pp/man:/usr/cad/synopsys/primepower/cur/doc/pt/man:/usr/cad/synopsys/pathmill/cur/doc/pm/man:/usr/cad/synopsys/pathmill/cur/doc/amps/man:/usr/cad/synopsys/nanosim/cur/doc/ns/man:/usr/cad/synopsys/synthesis/cur/doc/syn/man:/usr/cad/synopsys/vcs/2022.06/doc/man:/usr/cad/synopsys/synthesis/cur/doc/syn/man
+SNPS_ARCH=linux
+TARGET_ARCH=linux
+CCSS_KEYS=26585@lstc
+SYNOPSYS_CCSS=/usr/cad/synopsys/ccss/cur/linux/ccss
+CCSS_GNUHOME=/usr/cad/synopsys/ccss/cur/linux/gnupackages
+CCSS_DEBUGGER=ddd --gdb --debugger /usr/cad/synopsys/ccss/cur/linux/ccss/bin/gdbw --directory /usr/cad/synopsys/ccss/cur/linux/ccss/ccss_systemc/include/sysc/kernel --session ccss_dbg_ddd
+DDD_SESSIONS=.
+CCSS_SIM_DIR=/home/raid7_2/userb08/b08012/SIM
+SYSTEMC_HOME=/usr/cad/synopsys/ccss/cur/linux/ccss/ccss_systemc
+LD_LIBRARY_PATH=/usr/spring_soft/verdi/cur/share/PLI/nc_xl/LINUX/xl_shared:/usr/spring_soft/verdi/cur/share/PLI/nc_xl/LINUX/nc_shared:/home/raid7_4/raid1_1/linux/novas/verdi/cur/share/PLI/IUS/LINUX/
+FORMALITY=/usr/cad/synopsys/formality/cur
+installdir=/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice
+ARCH=linux64
+CMIARCH=RH_64
+mraarch=linux_64
+TMIARCH=RH_64
+HSP_HOME=/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice
+CDPL_HOME=/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/cdpl
+SPAPI_AHDL_INCLUDE=/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/include
+HSP_SIGMA_AMP=/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/linux64/python/AVA/ava
+SNPS_PLATFORM=linux64
+HSP_GCC=/home/raid7_4/raid1_1/linux/synopsys/hspice/2022.06/hspice/GNU/linux64/gcc/bin/gcc -m64 
+SNPS_64=1
+HSP_GCC_VERSION=9.2.0
+CDS_LOAD_ENV=CSF
+LEDA_PATH=/usr/cad/synopsys/leda/cur
+SNPSLMD_LICENSE_FILE=26585@lshc
+SNPS_SIMIF=/usr/cad/synopsys/nanosim/cur
+synopsys_root=/usr/cad/synopsys/pathmill/cur
+PRIMEPOWER=/usr/cad/synopsys/primepower/cur
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+SYNOPSYS_SCIROCCO=/usr/cad/synopsys/scirocco/cur
+SYNOPSYS_SIM=/usr/cad/synopsys/scirocco/cur
+SYNOPSYS_TMAX=/usr/cad/synopsys/tmax/cur
+VERDI_HOME=/usr/cad/synopsys/verdi/2022.06
+VCS_HOME=/usr/cad/synopsys/vcs/2022.06
+VCS_CC=gcc
+VERA_HOME=/usr/cad/synopsys/vera/cur/cur
+SHLIB_PATH=/usr/spring_soft/verdi/cur/share/PLI/nc_xl/LINUX/xl_shared:/usr/spring_soft/verdi/cur/share/PLI/nc_xl/LINUX/nc_shared:/usr/cad/synopsys/verdi/2022.06/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2022.06/share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2022.06/share/PLI/VCS/LINUX64/:
+ASSURAHOME=/usr/cad/cadence/ASSURA/cur
+CDS_LIC_FILE=/usr/cad/cadence/IC/cur/share/license/license.dat
+VERPLEX_HOME=/usr/cad/cadence/CONFRML/cur
+OAHOME=/usr/cad/cadence/oa_v22.04.073
+OA_HOME=/usr/cad/cadence/EDI/cur/oa
+CDS_Netlisting_Mode=Analog
+NEOCKTHOME=/usr/cad/cadence/NEOCIRCUIT/cur/tools/NeoCircuit
+ENCOUNTER=/usr/cad/cadence/EDI/cur/tools/fe
+MGC_HOME=/usr/mentor/calibre/cur
+MGC_TMPDIR=/tmp
+MGC_LOCATION_MAP=NO_MAP
+_IRUNROOT_=/usr/cad/cadence/INCISIV/cur/tools
+CDS_ARCH=lnx86
+NCRUNMODE=ncverilog:./INCA_libs/irun.lnx86.15.20.nc
+IRUNBATCH=FALSE
+IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
+TCL_LIBRARY=/usr/cad/cadence/INCISIV/cur/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=ncverilog
+argv[1]=Conv2d_tb.v
+argv[2]=Conv2d.v
+argv[3]=ConvKernel.v
+argv[4]=Mult.v
+120 profile - 100
+          CPU/Mem usage: 0.150 sys,  1.270 user,  67.15M sys,  0.00M vm
+121 VC callback profile - scalar:0 vector:0
+122 Wed May  3 23:41:58 2023
+123 pliAppInit
+124 FSDB_GATE is disabled.
+125 Enable Parallel Dumping.
+126 pliAppMiscSet: New Sim Round
+127 pliEntryInit
+128 LIBSSCORE=found /home/raid7_4/raid1_1/linux/novas/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+129 Sim process exit
