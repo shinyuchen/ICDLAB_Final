@@ -24,6 +24,7 @@ input [3:0] ALUCtrl_i;
 output reg[31:0] data_o;
 output reg Zero_o;
 wire [   BITWIDTH-1: 0] data_Relu_o;
+wire [   BITWIDTH-1: 0] data_BN_o;
 wire [MP_BITWIDTH-1: 0] data_MAX_pool_o;
 wire [MP_BITWIDTH * 2 * FC_OUTPUT_SIZE - 1 : 0] data_FC_o;
 wire [MP_BITWIDTH * FC_INPUT_SIZE * FC_OUTPUT_SIZE - 1 : 0] data_FC_weight;
@@ -83,7 +84,7 @@ FullConnect #(
 Conv2d #(
   .BITWIDTH(MP_BITWIDTH),
   .DATAWIDTH(CONV_DATA_SIZE),
-  .DATAHEIGH(CONV_DATA_SIZE),
+  .DATAHEIGHT(CONV_DATA_SIZE),
   .DATACHANNEL(1),
   .FILTERHEIGHT(CONV_FILTER_SIZE),
   .FILTERWIDTH(CONV_FILTER_SIZE),

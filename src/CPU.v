@@ -260,7 +260,7 @@ ALU AddSum(
     .weight_matrix  (),
     .data1_i        (IF_ID_pc_o),
     .data2_i        (shiftLeft_data_o),
-    .ALUCtrl_i      (3'b001),
+    .ALUCtrl_i      (4'b0001),
     .data_o         (AddSum_data_o),
     .Zero_o         ()
 );
