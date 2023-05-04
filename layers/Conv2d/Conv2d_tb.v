@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 module Conv2d_tb();
-parameter data_width = 5;
-parameter data_height = 5;
+parameter data_width = 2;
+parameter data_height = 2;
 parameter in_channel = 1;
 parameter out_channel = 1;
 parameter kernel_size = 3;
-parameter output_size = 5;
+parameter output_size = 2;
 
 reg signed  [8*data_width*data_height*in_channel-1:0]   data;
 reg signed  [8*kernel_size*kernel_size*out_channel-1:0] weight1;
@@ -17,11 +17,13 @@ Conv2d#(8, data_width, data_height, in_channel, kernel_size, kernel_size, out_ch
 integer idx;
 initial begin
     #5
-    data = {8'd2,8'd0,8'd0,8'd0,8'd0,
-            8'd3,8'd4,8'd6,8'd4,8'd6,
-            8'd7,8'd8,8'd8,8'd8,8'd8,
-            8'd3,8'd4,8'd6,8'd4,8'd6,
-            8'd10,8'd16,8'd15,8'd24,8'd18};
+    // data = {8'd2,8'd0,8'd0,8'd0,8'd0,
+    //         8'd3,8'd4,8'd6,8'd4,8'd6,
+    //         8'd7,8'd8,8'd8,8'd8,8'd8,
+    //         8'd3,8'd4,8'd6,8'd4,8'd6,
+    //         8'd10,8'd16,8'd15,8'd24,8'd18};
+    data = {8'd1,8'd1,
+            8'd1,8'd1};
     weight1 = {8'd1,8'd1,8'd1,
                8'd1,8'd1,8'd1,
                8'd1,8'd1,8'd1};

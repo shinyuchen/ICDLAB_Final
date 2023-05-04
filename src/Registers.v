@@ -1,7 +1,6 @@
 module Registers #(
     parameter FC_BITWIDTH     = 8, 
-    parameter FC_INPUT_SIZE   = 4, 
-    parameter FC_OUTPUT_SIZE  = 2
+    parameter WEIGHT_SIZE   = 4
 )
 (
     clk_i,
@@ -34,16 +33,22 @@ output  [31:0]      RSdata_o;
 output  [31:0]      RTdata_o;
 output  [31:0]       reg_o;
 output  [3:0]       pos_o;
-output  [FC_BITWIDTH * FC_INPUT_SIZE * FC_OUTPUT_SIZE - 1 : 0] weight_matrix_o;
+output  reg [FC_BITWIDTH * WEIGHT_SIZE * WEIGHT_SIZE - 1 : 0] weight_matrix_o;
 // Register File
-reg     [31:0]      register        [0:31];
-reg     [3:0]       pos             [0:31];
+reg     [31:0]      register        [0:15];
+reg     [3:0]       pos             [0:15];
 // Read Data      
 assign  RSdata_o        = register[RSaddr_i];
 assign  RTdata_o        = register[RTaddr_i];
 assign  reg_o           = register[op_address];
 assign  pos_o           = pos[op_address];
-assign  weight_matrix_o = {register[25], register[26]};
+
+always @(*) begin
+    for(i = WEIGHT_SIZE-1; i >= 0; i = i - 1) begin
+        weight_matrix_o[32*(i+1) -1-: 32] = register[15-i];
+    end
+end
+// assign  weight_matrix_o = {register[25], register[26]};
 // Write Data
 
 always@(negedge clk_i or posedge reset)begin
@@ -56,20 +61,30 @@ always@(negedge clk_i or posedge reset)begin
             register[3] <= 32'h00_00_00_00;
             register[4] <= 32'h7f_ff_e3_11;
             for(i=0;i< 2;i=i+1)register[i] <= 0;
-            for(i=5;i<32;i=i+1)register[i] <= 0;
-            for(i=0;i<32;i=i+1)pos[i]      <= 0;
+            for(i=5;i<16;i=i+1)register[i] <= 0;
+            for(i=0;i<16;i=i+1)pos[i]      <= 0;
         `elsif FC
             register[ 4] <= 32'h07_53_32_0c; // input
             register[ 3] <= 32'hff_7f_00_00; // bias (only the first two quarters will be read)
-            register[25] <= 32'h17_43_03_0f; // matrix row 1
-            register[26] <= 32'h08_78_5b_1f; // matrix row 2
+            register[12] <= 32'h17_43_03_0f; // matrix row 1
+            register[13] <= 32'h08_78_5b_1f; // matrix row 2
             for(i= 0;i< 3;i=i+1)register[i] <= 0;
-            for(i= 5;i<25;i=i+1)register[i] <= 0;
-            for(i=27;i<32;i=i+1)register[i] <= 0;
-            for(i= 0;i<32;i=i+1)pos[i]      <= 0;
+            for(i= 5;i<12;i=i+1)register[i] <= 0;
+            for(i=14;i<16;i=i+1)register[i] <= 0;
+            for(i= 0;i<16;i=i+1)pos[i]      <= 0;
+        `elsif Conv
+            register[ 4] <= 32'h01_01_01_01; // input
+            register[ 3] <= 32'h01_00_00_00; // bias 
+            register[12] <= 32'h01_01_01_01; // matrix row 1
+            register[13] <= 32'h01_01_01_01; // matrix row 2
+            register[14] <= 32'h01_01_01_01; // matrix row 3
+            register[15] <= 32'h01_01_01_01; // matrix row 4
+            for(i= 0;i< 3;i=i+1)register[i] <= 0;
+            for(i= 5;i<12;i=i+1)register[i] <= 0;
+            for(i= 0;i<16;i=i+1)pos[i]      <= 0;
         `else
-            for(i=0;i<32;i=i+1)register[i] <= 0;
-            for(i=0;i<32;i=i+1)pos[i]      <= 0;
+            for(i=0;i<16;i=i+1)register[i] <= 0;
+            for(i=0;i<16;i=i+1)pos[i]      <= 0;
         `endif
     end  
 

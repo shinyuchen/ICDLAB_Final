@@ -21,20 +21,20 @@
 
 
 module Conv2d #(
-    parameter integer BITWIDTH      = 8,
+    parameter BITWIDTH      = 8,
     
-    parameter integer DATAWIDTH     = 3,
-    parameter integer DATAHEIGHT    = 3,
-    parameter integer DATACHANNEL   = 1,
+    parameter DATAWIDTH     = 2,
+    parameter DATAHEIGHT    = 2,
+    parameter DATACHANNEL   = 1,
     
-    parameter integer FILTERHEIGHT  = 2,
-    parameter integer FILTERWIDTH   = 2,
-    parameter integer FILTERBATCH   = 1,
+    parameter FILTERHEIGHT  = 3,
+    parameter FILTERWIDTH   = 3,
+    parameter FILTERBATCH   = 1,
     
-    parameter integer STRIDEHEIGHT  = 1,
-    parameter integer STRIDEWIDTH   = 1,
+    parameter STRIDEHEIGHT  = 1,
+    parameter STRIDEWIDTH   = 1,
     
-    parameter integer PADDINGENABLE = 0
+    parameter PADDINGENABLE = 1
     )
     (
     //input clk,

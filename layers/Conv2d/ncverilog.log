@@ -1,0 +1,37 @@
+ncverilog: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s084: Started on May 03, 2023 at 23:41:56 CST
+ncverilog
+	Conv2d_tb.v
+	Conv2d.v
+	ConvKernel.v
+	Mult.v
+Loading snapshot worklib.Conv2d_tb:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+
+Input Matrix:
+
+   1    1 
+   1    1 
+
+
+Weight Kernel:
+
+   1    1    1 
+   1    1    1 
+   1    1    1 
+
+Bias:
+
+   1 
+
+Convolution Result:
+
+     5      5 
+     5      5 
+
+Simulation complete via $finish(1) at time 19 NS + 0
+./Conv2d_tb.v:68     $finish;
+ncsim> exit
+TOOL:	ncverilog	15.20-s084: Exiting on May 03, 2023 at 23:41:58 CST  (total: 00:00:02)
