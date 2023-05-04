@@ -1,0 +1,5 @@
+addi r6, r0, 1029
+addi r7, r0, 770
+bn r2, r6, r7
+sub r3, r10, r11
+relu r5, r5, r5
