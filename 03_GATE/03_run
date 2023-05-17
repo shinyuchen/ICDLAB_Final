@@ -1,0 +1,1 @@
+vcs ../src/test.v CPU_syn.v -full64 -R -v2005 -debug_access+all +v2k +vcs+fsdbon +neg_tchk +fsdb+mda +fsdbfile+CPU.fsdb fsa0m_a_generic_core_21.lib.src +define+FC+SDF
