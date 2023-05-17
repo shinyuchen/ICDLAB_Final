@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
-`define CYCLE_TIME 10.0          	  // Modify your clock period here
-`define SDFFILE    "WIN.sdf"	  // Modify your sdf file name
+`define CYCLE_TIME 50.0          	  // Modify your clock period here
+`define SDFFILE    "CPU_syn.sdf"	  // Modify your sdf file name
 `define End_CYCLE  300             // Modify cycle times once your design need more cycle times!
 
 
@@ -51,6 +51,9 @@ initial begin
     vout_addr = 2'b11;
     err = 0;
     instr_i = 0;
+    
+    Clk = 1;
+    
     for(k=0;k < (64*4+1) ;k=k+1) instr_store[k] = 0;
     // Load instructions into instruction memory
     `ifdef Relu
@@ -69,23 +72,17 @@ initial begin
         $readmemb("../dat/test_Conv.txt", instr_store);
         $readmemh("../dat/test_Conv_golden.txt",golden);
     `endif
-    `ifdef BN
-        $readmemb("../dat/test_BN.txt", instr_store);
-        $readmemh("../dat/test_BN_golden.txt",golden);
-        address = 5'd2; // r2
-        vout_addr = 2'b00;
-    `endif
     // Open output file
     outfile = $fopen("../dat/output.txt") | 1;
     
-    Clk = 1;
-
+end
+initial begin
     reset = 0;
+    #(`CYCLE_TIME/4)
     reset = 1;
-    #(`CYCLE_TIME)
+    #(`CYCLE_TIME/2)
     reset = 0; 
 end
-
 initial begin
 	$fsdbDumpfile("CPU.fsdb");
 	$fsdbDumpvars;
@@ -173,22 +170,6 @@ initial begin
                 end
             end
         `endif
-        `ifdef BN
-            // #(`CYCLE_TIME );
-            for(j=0;j<2;j=j+1)begin
-                if(j==1)address = address + 5'd1;
-                // vout_addr = 2'b00;
-                @(posedge Clk);
-                $display(value_o);
-                if(value_o !== golden[j])begin
-                    err = err + 1;
-                    $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
-                end
-                else begin
-                    $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
-                end
-            end
-        `endif
         #(`CYCLE_TIME*2); 
      $display("--------------------------- Simulation Stops !!---------------------------");
      if (err) begin 
@@ -243,7 +224,7 @@ $finish;
 end
   
 always@(posedge Clk) begin
-    if(counter == 300)    // stop after 240 cycles
+    if(counter == 3000)    // stop after 240 cycles
         $finish;
     
     counter = counter + 1;

@@ -35,6 +35,7 @@ module CPU
 //------------------------- Parameter -------------------------------//
 parameter FC_BITWIDTH       = 8;
 parameter WEIGHT_SIZE       = 4;
+parameter DATA_SIZE         = 4;
 
 //------------------------- I/O Ports -------------------------------//
 
@@ -128,6 +129,7 @@ wire toDataMemory; //NEW: used in MUX32 aluToDM
 wire [2:0] VALU_Control_VALUCtrl_o;
 wire [3:0] is_positive_line;
 wire [FC_BITWIDTH * WEIGHT_SIZE * WEIGHT_SIZE - 1 : 0] weight_reg;
+wire [FC_BITWIDTH * DATA_SIZE * DATA_SIZE - 1 : 0]     data_matrix;
 reg               flag;
 reg               start_i;
 reg [3:0] vector_signed [0:2];
@@ -257,6 +259,7 @@ Instruction_Memory Instruction_Memory(
 
 //AddSum was in EX stage initally, but moved to IF stage.
 ALU AddSum(
+    .data_matrix    (),
     .weight_matrix  (),
     .data1_i        (IF_ID_pc_o),
     .data2_i        (shiftLeft_data_o),
@@ -317,6 +320,7 @@ Registers Registers(
     .RTdata_o   (Registers_RTdata_o),                  //to ID_EX.RDData1_i
     .reg_o      (reg_o),
     .pos_o      (is_positive_line),
+    .data_matrix_o(data_matrix),
     .weight_matrix_o(weight_reg)
 );
 
@@ -372,13 +376,14 @@ MUX32 MUX_ALUSrc(
     .data_o     (MUX_ALUSrc_data_o)
 );
 
-ALU_Control ALU_Control(
+ALU_Control u_ALU_Control(
     .funct_i    (ALUfunct_in),
     .ALUOp_i    (ID_EX_ALUOp_o),
     .ALUCtrl_o  (ALU_Control_ALUCtrl_o)
 );
 
-ALU ALU(
+ALU u_ALU(
+    .data_matrix    (data_matrix),
     .weight_matrix  (weight_reg), 
     .data1_i        (ForwardToData1_data_o),
     .data2_i        (MUX_ALUSrc_data_o),
