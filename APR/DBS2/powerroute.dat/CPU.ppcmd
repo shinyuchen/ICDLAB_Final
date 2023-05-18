@@ -1,0 +1,112 @@
+# PPCMD 1 
+# sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { VCC GND } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+# 6 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addStripe -nets {VCC GND} -layer metal4 -direction vertical -width 1 -spacing 0.28 -set_to_set_distance 400 -start_from left -start_offset 250 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape } -stacked_via_bottom_layer metal1 -stacked_via_top_layer metal6 -via_using_exact_crossover_size false
+# 5 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 209890 209940 1238290 1237180 0 
+# 212170 212220 1236010 1234900 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# GND 1000 4 0 471380 1230080 400000 0 0 
+# VCC 1000 4 0 470100 1230080 400000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length 0 -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring }
+# 4 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
+# PPCMD 4 
+# sroute -connect { padPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { VCC GND } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+# 3 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 4 
+
+# PPCMD 5 
+# addRing -nets {VCC GND} -type core_rings -follow core -layer {top metal5 bottom metal5 left metal4 right metal4} -width {top 2 bottom 2 left 2 right 2} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 15 -use_interleaving_wire_group 1
+# 2 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# GND 2000 5 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 725090 147100 725090 151660 725090 156220 725090 160780 725090 165340 725090 169900 725090 174460 725090 179020 725090 183580 725090 188140 
+# 725090 192700 725090 197260 725090 201820 725090 206380 725090 210940 725090 1238180 725090 1242740 725090 1247300 725090 1251860 725090 1256420 
+# 725090 1260980 725090 1265540 725090 1270100 725090 1274660 725090 1279220 725090 1283780 725090 1288340 725090 1292900 725090 1297460 725090 1302020 
+# END_RING_PT_INFO_LIST 
+# GND 2000 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 147050 724560 151610 724560 156170 724560 160730 724560 165290 724560 169850 724560 174410 724560 178970 724560 183530 724560 188090 724560 
+# 192650 724560 197210 724560 201770 724560 206330 724560 210890 724560 1239290 724560 1243850 724560 1248410 724560 1252970 724560 1257530 724560 
+# 1262090 724560 1266650 724560 1271210 724560 1275770 724560 1280330 724560 1284890 724560 1289450 724560 1294010 724560 1298570 724560 1303130 724560 
+# END_RING_PT_INFO_LIST 
+# VCC 2000 5 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 725090 149380 725090 153940 725090 158500 725090 163060 725090 167620 725090 172180 725090 176740 725090 181300 725090 185860 725090 190420 
+# 725090 194980 725090 199540 725090 204100 725090 208660 725090 213220 725090 1235900 725090 1240460 725090 1245020 725090 1249580 725090 1254140 
+# 725090 1258700 725090 1263260 725090 1267820 725090 1272380 725090 1276940 725090 1281500 725090 1286060 725090 1290620 725090 1295180 725090 1299740 
+# END_RING_PT_INFO_LIST 
+# VCC 2000 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 149330 724560 153890 724560 158450 724560 163010 724560 167570 724560 172130 724560 176690 724560 181250 724560 185810 724560 190370 724560 
+# 194930 724560 199490 724560 204050 724560 208610 724560 213170 724560 1237010 724560 1241570 724560 1246130 724560 1250690 724560 1255250 724560 
+# 1259810 724560 1264370 724560 1268930 724560 1273490 724560 1278050 724560 1282610 724560 1287170 724560 1291730 724560 1296290 724560 1300850 724560 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 5 
+
+# PPCMD 6 
+# setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+# 1 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 6 
+

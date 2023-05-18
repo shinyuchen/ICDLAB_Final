@@ -1,0 +1,92 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu May 18 21:12:38 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+#@(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+#@(#)CDS: CPE v17.11-s095
+#@(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/DBS/place.dat CPU
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+setDrawView place
+setDrawView fplan
+create_ccopt_clock_tree_spec -file ccopt.spec
+ccopt_check_and_flatten_ilms_no_restore
+set_ccopt_property sink_type -pin ipad_clk_p_i/I ignore
+set_ccopt_property sink_type_reasons -pin ipad_clk_p_i/I no_sdc_clock
+create_ccopt_clock_tree -name clk_i -source clk_i -no_skew_group
+set_ccopt_property clock_period -pin clk_i 15
+create_ccopt_skew_group -name clk_i/func_mode -sources clk_i -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk_i/func_mode true
+set_ccopt_property target_insertion_delay -skew_group clk_i/func_mode 1.000
+set_ccopt_property extracted_from_clock_name -skew_group clk_i/func_mode clk_i
+set_ccopt_property extracted_from_constraint_mode_name -skew_group clk_i/func_mode func_mode
+set_ccopt_property extracted_from_delay_corners -skew_group clk_i/func_mode {DC_max DC_min}
+create_ccopt_skew_group -name clk_i/scan_mode -sources clk_i -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk_i/scan_mode true
+set_ccopt_property target_insertion_delay -skew_group clk_i/scan_mode 1.000
+set_ccopt_property extracted_from_clock_name -skew_group clk_i/scan_mode clk_i
+set_ccopt_property extracted_from_constraint_mode_name -skew_group clk_i/scan_mode scan_mode
+set_ccopt_property extracted_from_delay_corners -skew_group clk_i/scan_mode {DC_max DC_min}
+check_ccopt_clock_tree_convergence
+get_ccopt_property auto_design_state_for_ilms
+ccopt_design -cts
+fit
+ctd_win -id ctd_window
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/DBS/place.dat CPU
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+update_constraint_mode -name func_mode -sdc_files design/CPU_cts.sdc 
+update_constraint_mode -name scan_mode -sdc_files design/CPU_cts.sdc 
+create_ccopt_clock_tree_spec -file ccopt.spec
+ccopt_check_and_flatten_ilms_no_restore
+set_ccopt_property sink_type -pin ipad_clk_p_i/I ignore
+set_ccopt_property sink_type_reasons -pin ipad_clk_p_i/I no_sdc_clock
+create_ccopt_clock_tree -name clk_i -source clk_i -no_skew_group
+set_ccopt_property clock_period -pin clk_i 15
+create_ccopt_skew_group -name clk_i/func_mode -sources clk_i -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk_i/func_mode true
+set_ccopt_property target_insertion_delay -skew_group clk_i/func_mode 1.000
+set_ccopt_property extracted_from_clock_name -skew_group clk_i/func_mode clk_i
+set_ccopt_property extracted_from_constraint_mode_name -skew_group clk_i/func_mode func_mode
+set_ccopt_property extracted_from_delay_corners -skew_group clk_i/func_mode {DC_max DC_min}
+create_ccopt_skew_group -name clk_i/scan_mode -sources clk_i -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk_i/scan_mode true
+set_ccopt_property target_insertion_delay -skew_group clk_i/scan_mode 1.000
+set_ccopt_property extracted_from_clock_name -skew_group clk_i/scan_mode clk_i
+set_ccopt_property extracted_from_constraint_mode_name -skew_group clk_i/scan_mode scan_mode
+set_ccopt_property extracted_from_delay_corners -skew_group clk_i/scan_mode {DC_max DC_min}
+check_ccopt_clock_tree_convergence
+get_ccopt_property auto_design_state_for_ilms
+ccopt_design -cts
+ctd_win -id ctd_window
+setLayerPreference pinObj -isVisible 1
+setLayerPreference pinblock -isVisible 1
+setLayerPreference pinstdCell -isVisible 1
+setLayerPreference pinio -isVisible 1
+setLayerPreference piniopin -isVisible 1
+setLayerPreference pinother -isVisible 1
+ctd_win -id ctd_window

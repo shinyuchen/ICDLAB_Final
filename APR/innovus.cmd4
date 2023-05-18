@@ -1,0 +1,88 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu May 18 17:54:09 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+#@(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+#@(#)CDS: CPE v17.11-s095
+#@(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/DBS/placement.dat CPU
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+update_constraint_mode -name func_mode -sdc_files design/CPU_cts.sdc 
+update_constraint_mode -name scan_mode -sdc_files design/CPU_cts.sdc 
+create_ccopt_clock_tree_spec -file ccopt.spec
+ccopt_check_and_flatten_ilms_no_restore
+set_ccopt_property sink_type -pin ipad_clk_p_i/I ignore
+set_ccopt_property sink_type_reasons -pin ipad_clk_p_i/I no_sdc_clock
+create_ccopt_clock_tree -name clk_i -source clk_i -no_skew_group
+set_ccopt_property clock_period -pin clk_i 15
+create_ccopt_skew_group -name clk_i/func_mode -sources clk_i -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk_i/func_mode true
+set_ccopt_property target_insertion_delay -skew_group clk_i/func_mode 1.000
+set_ccopt_property extracted_from_clock_name -skew_group clk_i/func_mode clk_i
+set_ccopt_property extracted_from_constraint_mode_name -skew_group clk_i/func_mode func_mode
+set_ccopt_property extracted_from_delay_corners -skew_group clk_i/func_mode {DC_max DC_min}
+create_ccopt_skew_group -name clk_i/scan_mode -sources clk_i -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk_i/scan_mode true
+set_ccopt_property target_insertion_delay -skew_group clk_i/scan_mode 1.000
+set_ccopt_property extracted_from_clock_name -skew_group clk_i/scan_mode clk_i
+set_ccopt_property extracted_from_constraint_mode_name -skew_group clk_i/scan_mode scan_mode
+set_ccopt_property extracted_from_delay_corners -skew_group clk_i/scan_mode {DC_max DC_min}
+check_ccopt_clock_tree_convergence
+get_ccopt_property auto_design_state_for_ilms
+ccopt_design -cts
+ctd_win -id ctd_window
+setDrawView place
+setDrawView fplan
+selectInst Instruction_Memory/memory_reg_40__1_
+zoomSelected
+fit
+zoomOut
+zoomIn
+verify_drc
+setDrawView place
+setDrawView fplan
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/DBS/placement.dat CPU
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+verify_drc
+setDrawView place
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/DBS/powerroute.dat CPU
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DELC DELB DELA BUF8CK BUF8 BUF6CK BUF6 BUF4CK BUF4 BUF3CK BUF3 BUF2CK BUF2 BUF1S BUF1CK BUF12CK BUF1 INV8CK INV8 INV6CK INV6 INV4CK INV4 INV3CK INV3 INV2CK INV2 INV1S INV1CK INV12CK INV12 INV1} -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -modulePlan 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxDensity 0.6 -preserveRouting 0 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setPlaceMode -fp false
+placeDesign

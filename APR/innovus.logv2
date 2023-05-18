@@ -1,0 +1,949 @@
+[05/18 17:21:12      0s] 
+[05/18 17:21:12      0s] Cadence Innovus(TM) Implementation System.
+[05/18 17:21:12      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[05/18 17:21:12      0s] 
+[05/18 17:21:12      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[05/18 17:21:12      0s] Options:	
+[05/18 17:21:12      0s] Date:		Thu May 18 17:21:12 2023
+[05/18 17:21:12      0s] Host:		cad21 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (8cores*32cpus*Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz 20480KB)
+[05/18 17:21:12      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[05/18 17:21:12      0s] 
+[05/18 17:21:12      0s] License:
+[05/18 17:21:13      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[05/18 17:21:13      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[05/18 17:21:34     14s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[05/18 17:21:34     14s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[05/18 17:21:34     14s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[05/18 17:21:34     14s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[05/18 17:21:34     14s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[05/18 17:21:34     14s] @(#)CDS: CPE v17.11-s095
+[05/18 17:21:34     14s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[05/18 17:21:34     14s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[05/18 17:21:34     14s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[05/18 17:21:34     14s] @(#)CDS: RCDB 11.10
+[05/18 17:21:34     14s] --- Running on cad21 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (8cores*32cpus*Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz 20480KB) ---
+[05/18 17:21:34     14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_28887_cad21_b08034_N77M9m.
+
+[05/18 17:21:34     14s] Change the soft stacksize limit to 0.2%RAM (96 mbytes). Set global soft_stack_size_limit to change the value.
+[05/18 17:21:35     14s] 
+[05/18 17:21:35     14s] **INFO:  MMMC transition support version v31-84 
+[05/18 17:21:35     14s] 
+[05/18 17:21:35     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/18 17:21:35     14s] <CMD> suppressMessage ENCEXT-2799
+[05/18 17:21:35     15s] <CMD> getDrawView
+[05/18 17:21:35     15s] <CMD> loadWorkspace -name Physical
+[05/18 17:21:35     15s] <CMD> win
+[05/18 17:22:55     21s] <CMD> set init_gnd_net GND
+[05/18 17:22:55     21s] <CMD> set init_lef_file {lef/header6_V55_20ka_cic.lef lef/fsa0m_a_generic_core.lef lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef lef/fsa0m_a_t33_generic_io.lef lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef lef/BONDPAD.lef}
+[05/18 17:22:55     21s] <CMD> set init_verilog design/CPU_syn.v
+[05/18 17:22:55     21s] <CMD> set init_mmmc_file mmmc.view
+[05/18 17:22:55     21s] <CMD> set init_io_file design/CPU.ioc
+[05/18 17:22:55     21s] <CMD> set init_top_cell CPU
+[05/18 17:22:55     21s] <CMD> set init_pwr_net VCC
+[05/18 17:22:55     21s] <CMD> init_design
+[05/18 17:22:55     21s] #% Begin Load MMMC data ... (date=05/18 17:22:55, mem=434.2M)
+[05/18 17:22:55     21s] #% End Load MMMC data ... (date=05/18 17:22:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=434.3M, current mem=434.3M)
+[05/18 17:22:55     21s] 
+[05/18 17:22:55     21s] Loading LEF file lef/header6_V55_20ka_cic.lef ...
+[05/18 17:22:55     21s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[05/18 17:22:55     21s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[05/18 17:22:55     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/header6_V55_20ka_cic.lef at line 1290.
+[05/18 17:22:55     21s] 
+[05/18 17:22:55     21s] Loading LEF file lef/fsa0m_a_generic_core.lef ...
+[05/18 17:22:55     21s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[05/18 17:22:55     21s] The LEF parser will ignore this statement.
+[05/18 17:22:55     21s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file lef/fsa0m_a_generic_core.lef at line 1.
+[05/18 17:22:55     21s] Set DBUPerIGU to M2 pitch 620.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file lef/fsa0m_a_generic_core.lef at line 40071.
+[05/18 17:22:56     21s] 
+[05/18 17:22:56     21s] Loading LEF file lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef ...
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-58' for more detail.
+[05/18 17:22:56     21s] **WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+[05/18 17:22:56     21s] To increase the message display limit, refer to the product command reference manual.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[05/18 17:22:56     21s] 
+[05/18 17:22:56     21s] Loading LEF file lef/fsa0m_a_t33_generic_io.lef ...
+[05/18 17:22:56     21s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[05/18 17:22:56     21s] The LEF parser will ignore this statement.
+[05/18 17:22:56     21s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file lef/fsa0m_a_t33_generic_io.lef at line 1.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file lef/fsa0m_a_t33_generic_io.lef at line 2034.
+[05/18 17:22:56     21s] 
+[05/18 17:22:56     21s] Loading LEF file lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef ...
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-119' for more detail.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef at line 791.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef at line 791.
+[05/18 17:22:56     21s] 
+[05/18 17:22:56     21s] Loading LEF file lef/BONDPAD.lef ...
+[05/18 17:22:56     21s] WARNING (LEFPARS-2002): NAMESCASESENSITIVE is a required statement on LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without NAMESCASESENSITIVE defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/BONDPAD.lef at line 123.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/BONDPAD.lef at line 123.
+[05/18 17:22:56     21s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[05/18 17:22:56     21s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[05/18 17:22:56     21s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file lef/BONDPAD.lef at line 123.
+[05/18 17:22:56     21s] **WARN: (IMPLF-61):	392 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data have been ignored.
+[05/18 17:22:56     21s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/18 17:22:56     21s] Type 'man IMPLF-61' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'IO' in macro 'ZMA2GSD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'IO' in macro 'ZMA2GSC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'I' in macro 'XMD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'I' in macro 'XMC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'GNDO' in macro 'GNDIOD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'GNDO' in macro 'GNDIOC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/18 17:22:56     21s] Type 'man IMPLF-200' for more detail.
+[05/18 17:22:56     21s] 
+[05/18 17:22:56     21s] viaInitial starts at Thu May 18 17:22:56 2023
+viaInitial ends at Thu May 18 17:22:56 2023
+Loading view definition file from mmmc.view
+[05/18 17:22:56     21s] Reading lib_max timing library '/home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_generic_core_ss1p62v125c.lib' ...
+[05/18 17:22:57     22s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_generic_core_ss1p62v125c.lib)
+[05/18 17:22:57     22s] Read 382 cells in library 'fsa0m_a_generic_core_ss1p62v125c' 
+[05/18 17:22:57     22s] Reading lib_max timing library '/home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ss1p62v125c.lib' ...
+[05/18 17:22:57     22s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSC' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[05/18 17:22:57     22s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSD' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[05/18 17:22:57     22s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSC' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[05/18 17:22:57     22s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSD' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[05/18 17:22:57     22s] Read 6 cells in library 'fsa0m_a_t33_generic_io_ss1p62v125c' 
+[05/18 17:22:57     22s] Reading lib_min timing library '/home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_generic_core_ff1p98vm40c.lib' ...
+[05/18 17:22:58     23s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_generic_core_ff1p98vm40c.lib)
+[05/18 17:22:58     23s] Read 382 cells in library 'fsa0m_a_generic_core_ff1p98vm40c' 
+[05/18 17:22:58     23s] Reading lib_min timing library '/home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ff1p98vm40c.lib' ...
+[05/18 17:22:58     23s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSC' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[05/18 17:22:58     23s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSD' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[05/18 17:22:58     23s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSC' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[05/18 17:22:58     23s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSD' is not defined in the library. (File /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/lib/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[05/18 17:22:58     23s] Read 6 cells in library 'fsa0m_a_t33_generic_io_ff1p98vm40c' 
+[05/18 17:22:58     23s] *** End library_loading (cpu=0.04min, real=0.03min, mem=23.0M, fe_cpu=0.39min, fe_real=1.77min, fe_mem=554.6M) ***
+[05/18 17:22:58     23s] #% Begin Load netlist data ... (date=05/18 17:22:58, mem=532.6M)
+[05/18 17:22:58     23s] *** Begin netlist parsing (mem=554.6M) ***
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[05/18 17:22:58     23s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[05/18 17:22:58     23s] To increase the message display limit, refer to the product command reference manual.
+[05/18 17:22:58     23s] Created 388 new cells from 4 timing libraries.
+[05/18 17:22:58     23s] Reading netlist ...
+[05/18 17:22:58     23s] Backslashed names will retain backslash and a trailing blank character.
+[05/18 17:22:58     23s] Reading verilog netlist 'design/CPU_syn.v'
+[05/18 17:22:58     23s] 
+[05/18 17:22:58     23s] *** Memory Usage v#1 (Current mem = 557.645M, initial mem = 187.633M) ***
+[05/18 17:22:58     23s] *** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=557.6M) ***
+[05/18 17:22:58     23s] #% End Load netlist data ... (date=05/18 17:22:58, total cpu=0:00:00.2, real=0:00:00.0, peak res=532.6M, current mem=474.5M)
+[05/18 17:22:58     23s] Set top cell to CPU.
+[05/18 17:22:59     24s] Hooked 776 DB cells to tlib cells.
+[05/18 17:22:59     24s] Starting recursive module instantiation check.
+[05/18 17:22:59     24s] No recursion found.
+[05/18 17:22:59     24s] Building hierarchical netlist for Cell CPU ...
+[05/18 17:22:59     24s] *** Netlist is unique.
+[05/18 17:22:59     24s] ** info: there are 862 modules.
+[05/18 17:22:59     24s] ** info: there are 18387 stdCell insts.
+[05/18 17:22:59     24s] ** info: there are 30 Pad insts.
+[05/18 17:22:59     24s] 
+[05/18 17:22:59     24s] *** Memory Usage v#1 (Current mem = 609.566M, initial mem = 187.633M) ***
+[05/18 17:22:59     24s] Reading IO assignment file "design/CPU.ioc" ...
+[05/18 17:22:59     24s] Adjusting Core to Bottom to: 0.4400.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/18 17:22:59     24s] Type 'man IMPFP-3961' for more detail.
+[05/18 17:22:59     24s] Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+[05/18 17:22:59     24s] Set Default Net Delay as 1000 ps.
+[05/18 17:22:59     24s] Set Default Net Load as 0.5 pF. 
+[05/18 17:22:59     24s] Set Default Input Pin Transition as 0.1 ps.
+[05/18 17:22:59     24s] Extraction setup Delayed 
+[05/18 17:22:59     24s] *Info: initialize multi-corner CTS.
+[05/18 17:23:00     24s] Reading timing constraints file 'design/CPU.sdc' ...
+[05/18 17:23:00     24s] Current (total cpu=0:00:24.7, real=0:01:48, peak res=635.2M, current mem=635.2M)
+[05/18 17:23:00     24s] **WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File design/CPU.sdc, Line 23).
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] INFO (CTE): Reading of timing constraints file design/CPU.sdc completed, with 1 WARNING
+[05/18 17:23:00     24s] WARNING (CTE-25): Line: 7 of File design/CPU.sdc : Skipped unsupported command: set_fix_hold
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=656.9M, current mem=656.9M)
+[05/18 17:23:00     24s] Current (total cpu=0:00:24.9, real=0:01:48, peak res=656.9M, current mem=656.9M)
+[05/18 17:23:00     24s] Reading timing constraints file 'design/CPU.sdc' ...
+[05/18 17:23:00     24s] Current (total cpu=0:00:24.9, real=0:01:48, peak res=657.0M, current mem=657.0M)
+[05/18 17:23:00     24s] **WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File design/CPU.sdc, Line 23).
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] INFO (CTE): Reading of timing constraints file design/CPU.sdc completed, with 1 WARNING
+[05/18 17:23:00     24s] WARNING (CTE-25): Line: 7 of File design/CPU.sdc : Skipped unsupported command: set_fix_hold
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=657.3M, current mem=657.3M)
+[05/18 17:23:00     24s] Current (total cpu=0:00:24.9, real=0:01:48, peak res=657.3M, current mem=657.3M)
+[05/18 17:23:00     24s] Creating Cell Server ...(0, 1, 1, 1)
+[05/18 17:23:00     24s] Summary for sequential cells identification: 
+[05/18 17:23:00     24s]   Identified SBFF number: 42
+[05/18 17:23:00     24s]   Identified MBFF number: 0
+[05/18 17:23:00     24s]   Identified SB Latch number: 0
+[05/18 17:23:00     24s]   Identified MB Latch number: 0
+[05/18 17:23:00     24s]   Not identified SBFF number: 10
+[05/18 17:23:00     24s]   Not identified MBFF number: 0
+[05/18 17:23:00     24s]   Not identified SB Latch number: 0
+[05/18 17:23:00     24s]   Not identified MB Latch number: 0
+[05/18 17:23:00     24s]   Number of sequential cells which are not FFs: 27
+[05/18 17:23:00     24s] Total number of combinational cells: 290
+[05/18 17:23:00     24s] Total number of sequential cells: 79
+[05/18 17:23:00     24s] Total number of tristate cells: 13
+[05/18 17:23:00     24s] Total number of level shifter cells: 0
+[05/18 17:23:00     24s] Total number of power gating cells: 0
+[05/18 17:23:00     24s] Total number of isolation cells: 0
+[05/18 17:23:00     24s] Total number of power switch cells: 0
+[05/18 17:23:00     24s] Total number of pulse generator cells: 0
+[05/18 17:23:00     24s] Total number of always on buffers: 0
+[05/18 17:23:00     24s] Total number of retention cells: 0
+[05/18 17:23:00     24s] List of usable buffers: BUF1 BUF12CK BUF1S BUF1CK BUF2CK BUF2 BUF3 BUF4 BUF3CK BUF4CK BUF6CK BUF6 BUF8 BUF8CK
+[05/18 17:23:00     24s] Total number of usable buffers: 14
+[05/18 17:23:00     24s] List of unusable buffers:
+[05/18 17:23:00     24s] Total number of unusable buffers: 0
+[05/18 17:23:00     24s] List of usable inverters: INV1 INV12 INV12CK INV1CK INV1S INV2 INV3 INV2CK INV4 INV3CK INV4CK INV6 INV6CK INV8 INV8CK
+[05/18 17:23:00     24s] Total number of usable inverters: 15
+[05/18 17:23:00     24s] List of unusable inverters:
+[05/18 17:23:00     24s] Total number of unusable inverters: 0
+[05/18 17:23:00     24s] List of identified usable delay cells: DELA DELC DELB
+[05/18 17:23:00     24s] Total number of identified usable delay cells: 3
+[05/18 17:23:00     24s] List of identified unusable delay cells:
+[05/18 17:23:00     24s] Total number of identified unusable delay cells: 0
+[05/18 17:23:00     24s] Creating Cell Server, finished. 
+[05/18 17:23:00     24s] 
+[05/18 17:23:00     24s] Deleting Cell Server ...
+[05/18 17:23:00     25s] Patterns Extraction called explicitly through PreRoutePatternsIfNeeded call 
+[05/18 17:23:00     25s] Extraction setup Started 
+[05/18 17:23:00     25s] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[05/18 17:23:00     25s] **WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+[05/18 17:23:00     25s] Type 'man IMPEXT-6202' for more detail.
+[05/18 17:23:00     25s] Reading Capacitance Table File u18_Faraday.CapTbl ...
+[05/18 17:23:00     25s] Cap table was created using Encounter 13.13-s017_1.
+[05/18 17:23:00     25s] Process name: MIXED_MODE_RFCMOS18_1P6M_MMC_TOP_METAL20_6K.
+[05/18 17:23:00     25s] Reading Capacitance Table File u18_Faraday.CapTbl ...
+[05/18 17:23:00     25s] Cap table was created using Encounter 13.13-s017_1.
+[05/18 17:23:00     25s] Process name: MIXED_MODE_RFCMOS18_1P6M_MMC_TOP_METAL20_6K.
+[05/18 17:23:00     25s] Importing multi-corner RC tables ... 
+[05/18 17:23:00     25s] Summary of Active RC-Corners : 
+[05/18 17:23:00     25s]  
+[05/18 17:23:00     25s]  Analysis View: av_func_mode_max
+[05/18 17:23:00     25s]     RC-Corner Name        : RC_worst
+[05/18 17:23:00     25s]     RC-Corner Index       : 0
+[05/18 17:23:00     25s]     RC-Corner Temperature : 25 Celsius
+[05/18 17:23:00     25s]     RC-Corner Cap Table   : 'u18_Faraday.CapTbl'
+[05/18 17:23:00     25s]     RC-Corner PreRoute Res Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PreRoute Cap Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner Technology file: 'FireIce/icecaps.tch'
+[05/18 17:23:00     25s]  
+[05/18 17:23:00     25s]  Analysis View: av_scan_mode_max
+[05/18 17:23:00     25s]     RC-Corner Name        : RC_worst
+[05/18 17:23:00     25s]     RC-Corner Index       : 0
+[05/18 17:23:00     25s]     RC-Corner Temperature : 25 Celsius
+[05/18 17:23:00     25s]     RC-Corner Cap Table   : 'u18_Faraday.CapTbl'
+[05/18 17:23:00     25s]     RC-Corner PreRoute Res Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PreRoute Cap Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner Technology file: 'FireIce/icecaps.tch'
+[05/18 17:23:00     25s]  
+[05/18 17:23:00     25s]  Analysis View: av_func_mode_min
+[05/18 17:23:00     25s]     RC-Corner Name        : RC_best
+[05/18 17:23:00     25s]     RC-Corner Index       : 1
+[05/18 17:23:00     25s]     RC-Corner Temperature : 25 Celsius
+[05/18 17:23:00     25s]     RC-Corner Cap Table   : 'u18_Faraday.CapTbl'
+[05/18 17:23:00     25s]     RC-Corner PreRoute Res Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PreRoute Cap Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner Technology file: 'FireIce/icecaps.tch'
+[05/18 17:23:00     25s]  
+[05/18 17:23:00     25s]  Analysis View: av_scan_mode_min
+[05/18 17:23:00     25s]     RC-Corner Name        : RC_best
+[05/18 17:23:00     25s]     RC-Corner Index       : 1
+[05/18 17:23:00     25s]     RC-Corner Temperature : 25 Celsius
+[05/18 17:23:00     25s]     RC-Corner Cap Table   : 'u18_Faraday.CapTbl'
+[05/18 17:23:00     25s]     RC-Corner PreRoute Res Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PreRoute Cap Factor         : 1
+[05/18 17:23:00     25s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/18 17:23:00     25s]     RC-Corner Technology file: 'FireIce/icecaps.tch'
+[05/18 17:23:00     25s] Technology file 'FireIce/icecaps.tch' associated with first view 'av_func_mode_max' will be used as the primary corner for the multi-corner extraction.
+[05/18 17:23:00     25s] 
+[05/18 17:23:00     25s] *** Summary of all messages that are not suppressed in this session:
+[05/18 17:23:00     25s] Severity  ID               Count  Summary                                  
+[05/18 17:23:00     25s] WARNING   IMPLF-58           392  MACRO '%s' has been found in the databas...
+[05/18 17:23:00     25s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[05/18 17:23:00     25s] WARNING   IMPLF-200            7  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[05/18 17:23:00     25s] WARNING   IMPLF-119           12  LAYER '%s' has been found in the databas...
+[05/18 17:23:00     25s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[05/18 17:23:00     25s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[05/18 17:23:00     25s] WARNING   IMPVL-159          764  Pin '%s' of cell '%s' is defined in LEF ...
+[05/18 17:23:00     25s] WARNING   TCLCMD-1014          2  The SDC set_operating_conditions asserti...
+[05/18 17:23:00     25s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[05/18 17:23:00     25s] WARNING   TECHLIB-436          8  Attribute '%s' on '%s' pin '%s' of cell ...
+[05/18 17:23:00     25s] *** Message Summary: 1197 warning(s), 0 error(s)
+[05/18 17:23:00     25s] 
+[05/18 17:23:21     26s] <CMD> clearGlobalNets
+[05/18 17:23:21     26s] <CMD> globalNetConnect VCC -type pgpin -pin VCC -inst *
+[05/18 17:23:21     26s] <CMD> globalNetConnect GND -type pgpin -pin GND -inst *
+[05/18 17:23:27     26s] <CMD> getIoFlowFlag
+[05/18 17:23:44     28s] <CMD> setIoFlowFlag 0
+[05/18 17:23:44     28s] <CMD> floorPlan -site core_5040 -d 1300 1300 80 80 80 80
+[05/18 17:23:44     28s] **WARN: (IMPFP-4026):	Adjusting core to 'Left' to 79.980000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+[05/18 17:23:44     28s] **WARN: (IMPFP-4026):	Adjusting core to 'Bottom' to 80.080000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+[05/18 17:23:44     28s] **WARN: (IMPFP-4026):	Adjusting core to 'Right' to 79.980000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+[05/18 17:23:44     28s] **WARN: (IMPFP-4026):	Adjusting core to 'Top' to 80.080000 due to track/row misalignment. To force the value, specify the -noSnapToGrid option or use fpiSetSnapRule command to specify the die/core to different grid.
+[05/18 17:23:44     28s] Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+[05/18 17:23:44     28s] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[05/18 17:23:44     28s] <CMD> uiSetTool select
+[05/18 17:23:44     28s] <CMD> getIoFlowFlag
+[05/18 17:23:44     28s] <CMD> fit
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingOffset 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingLayers {}
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingOffset 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingLayers {}
+[05/18 17:23:51     28s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingOffset 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeRingLayers {}
+[05/18 17:23:51     28s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/18 17:23:51     28s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/18 17:24:15     30s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+[05/18 17:24:15     30s] The ring targets are set to core/block ring wires.
+[05/18 17:24:15     30s] addRing command will consider rows while creating rings.
+[05/18 17:24:15     30s] addRing command will disallow rings to go over rows.
+[05/18 17:24:15     30s] addRing command will ignore shorts while creating rings.
+[05/18 17:24:15     30s] <CMD> addRing -nets {VCC GND} -type core_rings -follow core -layer {top metal5 bottom metal5 left metal4 right metal4} -width {top 2 bottom 2 left 2 right 2} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 15 -use_interleaving_wire_group 1
+[05/18 17:24:15     30s] 
+[05/18 17:24:15     30s] Ring generation is complete.
+[05/18 17:24:15     30s] vias are now being generated.
+[05/18 17:24:15     30s] addRing created 120 wires.
+[05/18 17:24:15     30s] ViaGen created 1800 vias, deleted 0 via to avoid violation.
+[05/18 17:24:15     30s] +--------+----------------+----------------+
+[05/18 17:24:15     30s] |  Layer |     Created    |     Deleted    |
+[05/18 17:24:15     30s] +--------+----------------+----------------+
+[05/18 17:24:15     30s] | metal4 |       60       |       NA       |
+[05/18 17:24:15     30s] |  via4  |      1800      |        0       |
+[05/18 17:24:15     30s] | metal5 |       60       |       NA       |
+[05/18 17:24:15     30s] +--------+----------------+----------------+
+[05/18 17:24:26     31s] <CMD> setSrouteMode -viaConnectToShape { noshape }
+[05/18 17:24:26     31s] <CMD> sroute -connect { padPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+[05/18 17:24:26     31s] **WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+[05/18 17:24:26     31s] *** Begin SPECIAL ROUTE on Thu May 18 17:24:26 2023 ***
+[05/18 17:24:26     31s] SPECIAL ROUTE ran on directory: /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR
+[05/18 17:24:26     31s] SPECIAL ROUTE ran on machine: cad21 (Linux 3.10.0-1160.el7.x86_64 Xeon 2.52Ghz)
+[05/18 17:24:26     31s] 
+[05/18 17:24:26     31s] Begin option processing ...
+[05/18 17:24:26     31s] srouteConnectPowerBump set to false
+[05/18 17:24:26     31s] routeSpecial set to true
+[05/18 17:24:26     31s] srouteBottomLayerLimit set to 1
+[05/18 17:24:26     31s] srouteBottomTargetLayerLimit set to 1
+[05/18 17:24:26     31s] srouteConnectBlockPin set to false
+[05/18 17:24:26     31s] srouteConnectConverterPin set to false
+[05/18 17:24:26     31s] srouteConnectCorePin set to false
+[05/18 17:24:26     31s] srouteConnectStripe set to false
+[05/18 17:24:26     31s] srouteCrossoverViaBottomLayer set to 1
+[05/18 17:24:26     31s] srouteCrossoverViaTopLayer set to 6
+[05/18 17:24:26     31s] srouteFollowCorePinEnd set to 3
+[05/18 17:24:26     31s] srouteFollowPadPin set to false
+[05/18 17:24:26     31s] srouteJogControl set to "preferWithChanges differentLayer"
+[05/18 17:24:26     31s] srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
+[05/18 17:24:26     31s] sroutePadPinAllPorts set to true
+[05/18 17:24:26     31s] sroutePreserveExistingRoutes set to true
+[05/18 17:24:26     31s] srouteRoutePowerBarPortOnBothDir set to true
+[05/18 17:24:26     31s] srouteStopBlockPin set to "nearestTarget"
+[05/18 17:24:26     31s] srouteTopLayerLimit set to 6
+[05/18 17:24:26     31s] srouteTopTargetLayerLimit set to 6
+[05/18 17:24:26     31s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1753.00 megs.
+[05/18 17:24:26     31s] 
+[05/18 17:24:26     31s] Reading DB technology information...
+[05/18 17:24:26     31s] Finished reading DB technology information.
+[05/18 17:24:26     31s] Reading floorplan and netlist information...
+[05/18 17:24:26     31s] Finished reading floorplan and netlist information.
+[05/18 17:24:26     31s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[05/18 17:24:26     31s] Read in 104 macros, 104 used
+[05/18 17:24:26     31s] Read in 139 components
+[05/18 17:24:26     31s]   97 core components: 97 unplaced, 0 placed, 0 fixed
+[05/18 17:24:26     31s]   42 pad components: 0 unplaced, 0 placed, 42 fixed
+[05/18 17:24:26     31s] Read in 30 logical pins
+[05/18 17:24:26     31s] Read in 30 nets
+[05/18 17:24:26     31s] Read in 2 special nets, 2 routed
+[05/18 17:24:26     31s] Read in 198 terminals
+[05/18 17:24:26     31s] Begin power routing ...
+[05/18 17:24:26     31s]   Number of IO ports routed: 12
+[05/18 17:24:26     31s] End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1764.00 megs.
+[05/18 17:24:26     31s] 
+[05/18 17:24:26     31s] 
+[05/18 17:24:26     31s] 
+[05/18 17:24:26     31s]  Begin updating DB with routing results ...
+[05/18 17:24:26     31s]  Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+[05/18 17:24:26     31s] Pin and blockage extraction finished
+[05/18 17:24:26     31s] 
+[05/18 17:24:26     31s] sroute created 12 wires.
+[05/18 17:24:26     31s] ViaGen created 12 vias, deleted 0 via to avoid violation.
+[05/18 17:24:26     31s] +--------+----------------+----------------+
+[05/18 17:24:26     31s] |  Layer |     Created    |     Deleted    |
+[05/18 17:24:26     31s] +--------+----------------+----------------+
+[05/18 17:24:26     31s] | metal4 |       12       |       NA       |
+[05/18 17:24:26     31s] |  via4  |       12       |        0       |
+[05/18 17:24:26     31s] +--------+----------------+----------------+
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingOffset 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingLayers {}
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingOffset 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeRingLayers {}
+[05/18 17:24:33     31s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/18 17:24:33     31s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/18 17:24:34     31s] <CMD> set sprCreateIeRingOffset 1.0
+[05/18 17:24:34     31s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/18 17:24:34     31s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/18 17:24:34     31s] <CMD> set sprCreateIeRingLayers {}
+[05/18 17:24:34     31s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/18 17:24:34     31s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/18 17:24:53     33s] <CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length 0 -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring }
+[05/18 17:24:53     33s] addStripe will allow jog to connect padcore ring and block ring.
+[05/18 17:24:53     33s] Stripes will stop at the boundary of the specified area.
+[05/18 17:24:53     33s] When breaking rings, the power planner will consider the existence of blocks.
+[05/18 17:24:53     33s] Stripes will not extend to closest target.
+[05/18 17:24:53     33s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[05/18 17:24:53     33s] Stripes will not be created over regions without power planning wires.
+[05/18 17:24:53     33s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[05/18 17:24:53     33s] addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[05/18 17:24:53     33s] AddStripe segment minimum length set to 1
+[05/18 17:24:53     33s] Offset for stripe breaking is set to 0.
+[05/18 17:24:53     33s] <CMD> addStripe -nets {VCC GND} -layer metal4 -direction vertical -width 1 -spacing 0.28 -set_to_set_distance 400 -start_from left -start_offset 250 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+[05/18 17:24:53     33s] 
+[05/18 17:24:53     33s] Starting stripe generation ...
+[05/18 17:24:53     33s] Non-Default Mode Option Settings :
+[05/18 17:24:53     33s]   NONE
+[05/18 17:24:53     33s] Stripe generation is complete.
+[05/18 17:24:53     33s] vias are now being generated.
+[05/18 17:24:53     33s] addStripe created 4 wires.
+[05/18 17:24:53     33s] ViaGen created 120 vias, deleted 0 via to avoid violation.
+[05/18 17:24:53     33s] +--------+----------------+----------------+
+[05/18 17:24:53     33s] |  Layer |     Created    |     Deleted    |
+[05/18 17:24:53     33s] +--------+----------------+----------------+
+[05/18 17:24:53     33s] | metal4 |        4       |       NA       |
+[05/18 17:24:53     33s] |  via4  |       120      |        0       |
+[05/18 17:24:53     33s] +--------+----------------+----------------+
+[05/18 17:25:10     34s] <CMD> setSrouteMode -viaConnectToShape { ring stripe }
+[05/18 17:25:10     34s] <CMD> sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+[05/18 17:25:10     34s] **WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+[05/18 17:25:10     34s] *** Begin SPECIAL ROUTE on Thu May 18 17:25:10 2023 ***
+[05/18 17:25:10     34s] SPECIAL ROUTE ran on directory: /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR
+[05/18 17:25:10     34s] SPECIAL ROUTE ran on machine: cad21 (Linux 3.10.0-1160.el7.x86_64 Xeon 2.80Ghz)
+[05/18 17:25:10     34s] 
+[05/18 17:25:10     34s] Begin option processing ...
+[05/18 17:25:10     34s] srouteConnectPowerBump set to false
+[05/18 17:25:10     34s] routeSelectNet set to "GND VCC"
+[05/18 17:25:10     34s] routeSpecial set to true
+[05/18 17:25:10     34s] srouteBottomLayerLimit set to 1
+[05/18 17:25:10     34s] srouteBottomTargetLayerLimit set to 1
+[05/18 17:25:10     34s] srouteConnectBlockPin set to false
+[05/18 17:25:10     34s] srouteConnectConverterPin set to false
+[05/18 17:25:10     34s] srouteConnectPadPin set to false
+[05/18 17:25:10     34s] srouteConnectStripe set to false
+[05/18 17:25:10     34s] srouteCrossoverViaBottomLayer set to 1
+[05/18 17:25:10     34s] srouteCrossoverViaTopLayer set to 6
+[05/18 17:25:10     34s] srouteFollowCorePinEnd set to 3
+[05/18 17:25:10     34s] srouteFollowPadPin set to false
+[05/18 17:25:10     34s] srouteJogControl set to "preferWithChanges differentLayer"
+[05/18 17:25:10     34s] srouteNoViaOnWireShape set to "padring blockring blockpin coverpin noshape blockwire corewire followpin iowire"
+[05/18 17:25:10     34s] sroutePadPinAllPorts set to true
+[05/18 17:25:10     34s] sroutePreserveExistingRoutes set to true
+[05/18 17:25:10     34s] srouteRoutePowerBarPortOnBothDir set to true
+[05/18 17:25:10     34s] srouteStopBlockPin set to "nearestTarget"
+[05/18 17:25:10     34s] srouteTopLayerLimit set to 6
+[05/18 17:25:10     34s] srouteTopTargetLayerLimit set to 6
+[05/18 17:25:10     34s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1770.00 megs.
+[05/18 17:25:10     34s] 
+[05/18 17:25:10     34s] Reading DB technology information...
+[05/18 17:25:10     34s] Finished reading DB technology information.
+[05/18 17:25:10     34s] Reading floorplan and netlist information...
+[05/18 17:25:10     34s] Finished reading floorplan and netlist information.
+[05/18 17:25:10     34s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[05/18 17:25:10     34s] Read in 784 macros, 106 used
+[05/18 17:25:10     34s] Read in 139 components
+[05/18 17:25:10     34s]   97 core components: 97 unplaced, 0 placed, 0 fixed
+[05/18 17:25:10     34s]   42 pad components: 0 unplaced, 0 placed, 42 fixed
+[05/18 17:25:10     34s] Read in 30 logical pins
+[05/18 17:25:10     34s] Read in 30 nets
+[05/18 17:25:10     34s] Read in 2 special nets, 2 routed
+[05/18 17:25:10     34s] Read in 198 terminals
+[05/18 17:25:10     34s] 2 nets selected.
+[05/18 17:25:10     34s] 
+[05/18 17:25:10     34s] Begin power routing ...
+[05/18 17:25:10     34s] CPU time for FollowPin 0 seconds
+[05/18 17:25:10     34s] CPU time for FollowPin 0 seconds
+[05/18 17:25:11     35s]   Number of Core ports routed: 342
+[05/18 17:25:11     35s]   Number of Followpin connections: 171
+[05/18 17:25:11     35s] End power routing: cpu: 0:00:01, real: 0:00:01, peak: 1781.00 megs.
+[05/18 17:25:11     35s] 
+[05/18 17:25:11     35s] 
+[05/18 17:25:11     35s] 
+[05/18 17:25:11     35s]  Begin updating DB with routing results ...
+[05/18 17:25:11     35s]  Updating DB with 0 via definition ...
+[05/18 17:25:11     35s] sroute created 513 wires.
+[05/18 17:25:11     35s] ViaGen created 16416 vias, deleted 0 via to avoid violation.
+[05/18 17:25:11     35s] +--------+----------------+----------------+
+[05/18 17:25:11     35s] |  Layer |     Created    |     Deleted    |
+[05/18 17:25:11     35s] +--------+----------------+----------------+
+[05/18 17:25:11     35s] | metal1 |       513      |       NA       |
+[05/18 17:25:11     35s] |   via  |      5472      |        0       |
+[05/18 17:25:11     35s] |  via2  |      5472      |        0       |
+[05/18 17:25:11     35s] |  via3  |      5472      |        0       |
+[05/18 17:25:11     35s] +--------+----------------+----------------+
+[05/18 17:25:36     37s] <CMD> addIoFiller -cell EMPTY16D -prefix IOFILLER
+[05/18 17:25:36     37s] Added 26 of filler cell 'EMPTY16D' on top side.
+[05/18 17:25:36     37s] Added 14 of filler cell 'EMPTY16D' on left side.
+[05/18 17:25:36     37s] Added 33 of filler cell 'EMPTY16D' on bottom side.
+[05/18 17:25:36     37s] Added 80 of filler cell 'EMPTY16D' on right side.
+[05/18 17:25:36     37s] <CMD> addIoFiller -cell EMPTY8D -prefix IOFILLER
+[05/18 17:25:36     37s] Added 0 of filler cell 'EMPTY8D' on top side.
+[05/18 17:25:36     37s] Added 0 of filler cell 'EMPTY8D' on left side.
+[05/18 17:25:36     37s] Added 11 of filler cell 'EMPTY8D' on bottom side.
+[05/18 17:25:36     37s] Added 4 of filler cell 'EMPTY8D' on right side.
+[05/18 17:25:36     37s] <CMD> addIoFiller -cell EMPTY4D -prefix IOFILLER
+[05/18 17:25:36     37s] Added 0 of filler cell 'EMPTY4D' on top side.
+[05/18 17:25:36     37s] Added 14 of filler cell 'EMPTY4D' on left side.
+[05/18 17:25:36     37s] Added 0 of filler cell 'EMPTY4D' on bottom side.
+[05/18 17:25:36     37s] Added 4 of filler cell 'EMPTY4D' on right side.
+[05/18 17:25:36     37s] <CMD> addIoFiller -cell EMPTY2D -prefix IOFILLER
+[05/18 17:25:36     37s] Added 0 of filler cell 'EMPTY2D' on top side.
+[05/18 17:25:36     37s] Added 14 of filler cell 'EMPTY2D' on left side.
+[05/18 17:25:36     37s] Added 0 of filler cell 'EMPTY2D' on bottom side.
+[05/18 17:25:36     37s] Added 4 of filler cell 'EMPTY2D' on right side.
+[05/18 17:25:36     37s] <CMD> addIoFiller -cell EMPTY1D -prefix IOFILLER -fillAnyGap
+[05/18 17:25:36     37s] Added 26 of filler cell 'EMPTY1D' on top side.
+[05/18 17:25:36     37s] Added 28 of filler cell 'EMPTY1D' on left side.
+[05/18 17:25:36     37s] Added 22 of filler cell 'EMPTY1D' on bottom side.
+[05/18 17:25:36     37s] Added 8 of filler cell 'EMPTY1D' on right side.
+[05/18 17:25:39     37s] <CMD> fit
+[05/18 17:25:48     38s] <CMD> setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
+[05/18 17:25:48     38s] <CMD> verifyGeometry
+[05/18 17:25:48     38s]  *** Starting Verify Geometry (MEM: 1024.0) ***
+[05/18 17:25:48     38s] 
+[05/18 17:25:48     38s] **WARN: (IMPVFG-257):	verifyGeometry command is replaced by verify_drc command. It still works in this release but will be removed in future release. Please update your script to use the new command.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Starting Verification
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Initializing
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Deleting Existing Violations
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Creating Sub-Areas
+[05/18 17:25:48     38s]                   ...... bin size: 10800
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... SubArea : 1 of 4
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Cells          :  84 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Sub-Area : 1 complete 84 Viols. 0 Wrngs.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... SubArea : 2 of 4
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Cells          :  56 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... Sub-Area : 2 complete 56 Viols. 0 Wrngs.
+[05/18 17:25:48     38s]   VERIFY GEOMETRY ...... SubArea : 3 of 4
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Cells          :  91 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Sub-Area : 3 complete 91 Viols. 0 Wrngs.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... SubArea : 4 of 4
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Cells          :  63 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+[05/18 17:25:49     38s]   VERIFY GEOMETRY ...... Sub-Area : 4 complete 63 Viols. 0 Wrngs.
+[05/18 17:25:49     38s] VG: elapsed time: 1.00
+[05/18 17:25:49     38s] Begin Summary ...
+[05/18 17:25:49     38s]   Cells       : 0
+[05/18 17:25:49     38s]   SameNet     : 0
+[05/18 17:25:49     38s]   Wiring      : 0
+[05/18 17:25:49     38s]   Antenna     : 0
+[05/18 17:25:49     38s]   Short       : 0
+[05/18 17:25:49     38s]   Overlap     : 294
+[05/18 17:25:49     38s] End Summary
+[05/18 17:25:49     38s] 
+[05/18 17:25:49     38s]   Verification Complete : 294 Viols.  0 Wrngs.
+[05/18 17:25:49     38s] 
+[05/18 17:25:49     38s] **********End: VERIFY GEOMETRY**********
+[05/18 17:25:49     38s]  *** verify geometry (CPU: 0:00:00.8  MEM: 63.5M)
+[05/18 17:25:49     38s] 
+[05/18 17:25:49     38s] <CMD> setVerifyGeometryMode -area { 0 0 0 0 }
+[05/18 17:26:13     40s] <CMD> verifyConnectivity -nets {VCC GND} -type special -noUnroutedNet -error 1000 -warning 50
+[05/18 17:26:13     40s] VERIFY_CONNECTIVITY use new engine.
+[05/18 17:26:13     40s] 
+[05/18 17:26:13     40s] ******** Start: VERIFY CONNECTIVITY ********
+[05/18 17:26:13     40s] Start Time: Thu May 18 17:26:13 2023
+[05/18 17:26:13     40s] 
+[05/18 17:26:13     40s] Design Name: CPU
+[05/18 17:26:13     40s] Database Units: 1000
+[05/18 17:26:13     40s] Design Boundary: (0.0000, 0.0000) (1300.1400, 1299.7600)
+[05/18 17:26:13     40s] Error Limit = 1000; Warning Limit = 50
+[05/18 17:26:13     40s] Check specified nets
+[05/18 17:26:13     40s] *** Checking Net VCC
+[05/18 17:26:13     40s] *** Checking Net GND
+[05/18 17:26:13     40s] 
+[05/18 17:26:13     40s] Begin Summary 
+[05/18 17:26:13     40s]   Found no problems or warnings.
+[05/18 17:26:13     40s] End Summary
+[05/18 17:26:13     40s] 
+[05/18 17:26:13     40s] End Time: Thu May 18 17:26:13 2023
+[05/18 17:26:13     40s] Time Elapsed: 0:00:00.0
+[05/18 17:26:13     40s] 
+[05/18 17:26:13     40s] ******** End: VERIFY CONNECTIVITY ********
+[05/18 17:26:13     40s]   Verification Complete : 0 Viols.  0 Wrngs.
+[05/18 17:26:13     40s]   (CPU Time: 0:00:00.1  MEM: 0.000M)
+[05/18 17:26:13     40s] 
+[05/18 17:26:29     41s] <CMD> saveDesign DBS/powerroute
+[05/18 17:26:29     41s] #% Begin save design ... (date=05/18 17:26:29, mem=911.4M)
+[05/18 17:26:29     41s] % Begin Save netlist data ... (date=05/18 17:26:29, mem=911.9M)
+[05/18 17:26:29     41s] Writing Binary DB to DBS/powerroute.dat.tmp/CPU.v.bin in single-threaded mode...
+[05/18 17:26:29     42s] % End Save netlist data ... (date=05/18 17:26:29, total cpu=0:00:00.1, real=0:00:00.0, peak res=912.0M, current mem=912.0M)
+[05/18 17:26:29     42s] % Begin Save AAE data ... (date=05/18 17:26:29, mem=912.0M)
+[05/18 17:26:29     42s] Saving AAE Data ...
+[05/18 17:26:29     42s] % End Save AAE data ... (date=05/18 17:26:29, total cpu=0:00:00.0, real=0:00:00.0, peak res=912.0M, current mem=912.0M)
+[05/18 17:26:29     42s] % Begin Save clock tree data ... (date=05/18 17:26:29, mem=912.8M)
+[05/18 17:26:29     42s] % End Save clock tree data ... (date=05/18 17:26:29, total cpu=0:00:00.0, real=0:00:00.0, peak res=912.8M, current mem=912.8M)
+[05/18 17:26:29     42s] Saving preference file DBS/powerroute.dat.tmp/gui.pref.tcl ...
+[05/18 17:26:29     42s] Saving mode setting ...
+[05/18 17:26:29     42s] Saving global file ...
+[05/18 17:26:30     42s] % Begin Save floorplan data ... (date=05/18 17:26:30, mem=913.1M)
+[05/18 17:26:30     42s] Saving floorplan file ...
+[05/18 17:26:30     42s] % End Save floorplan data ... (date=05/18 17:26:30, total cpu=0:00:00.1, real=0:00:00.0, peak res=913.2M, current mem=913.2M)
+[05/18 17:26:30     42s] Saving Drc markers ...
+[05/18 17:26:30     42s] ... 294 markers are saved ...
+[05/18 17:26:30     42s] ... 294 geometry drc markers are saved ...
+[05/18 17:26:30     42s] ... 0 antenna drc markers are saved ...
+[05/18 17:26:30     42s] % Begin Save placement data ... (date=05/18 17:26:30, mem=913.2M)
+[05/18 17:26:30     42s] ** Saving stdCellPlacement_binary (version# 1) ...
+[05/18 17:26:30     42s] *** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1087.5M) ***
+[05/18 17:26:30     42s] % End Save placement data ... (date=05/18 17:26:30, total cpu=0:00:00.0, real=0:00:00.0, peak res=913.3M, current mem=913.3M)
+[05/18 17:26:30     42s] % Begin Save routing data ... (date=05/18 17:26:30, mem=913.3M)
+[05/18 17:26:30     42s] Saving route file ...
+[05/18 17:26:30     42s] *** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1087.5M) ***
+[05/18 17:26:30     42s] % End Save routing data ... (date=05/18 17:26:30, total cpu=0:00:00.1, real=0:00:00.0, peak res=913.3M, current mem=913.3M)
+[05/18 17:26:30     42s] Saving property file DBS/powerroute.dat.tmp/CPU.prop
+[05/18 17:26:30     42s] *** Completed saveProperty (cpu=0:00:00.1 real=0:00:00.0 mem=1087.5M) ***
+[05/18 17:26:30     42s] % Begin Save power constraints data ... (date=05/18 17:26:30, mem=913.6M)
+[05/18 17:26:30     42s] % End Save power constraints data ... (date=05/18 17:26:30, total cpu=0:00:00.0, real=0:00:00.0, peak res=913.7M, current mem=913.7M)
+[05/18 17:26:31     42s] Generated self-contained design powerroute.dat.tmp
+[05/18 17:26:31     42s] #% End save design ... (date=05/18 17:26:31, total cpu=0:00:00.8, real=0:00:02.0, peak res=913.8M, current mem=913.8M)
+[05/18 17:26:31     42s] *** Message Summary: 0 warning(s), 0 error(s)
+[05/18 17:26:31     42s] 
+[05/18 17:26:37     43s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:37     43s] **WARN: (IMPTCM-77):	Option "-modulePlan" for command getPlaceMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:37     43s] **WARN: (IMPTCM-125):	Option "-checkPinLayerForAccess" for command getPlaceMode is obsolete and will be ignored. It no longer has any effect and should be removed from your script.
+[05/18 17:26:45     43s] <CMD> setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+[05/18 17:26:45     43s] <CMD> setEndCapMode -reset
+[05/18 17:26:45     43s] <CMD> setEndCapMode -boundary_tap false
+[05/18 17:26:45     43s] <CMD> setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-envDontUseLicsForThreadings" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-routeAllowPowerGroundPin" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-routeAllowPowerGroundPin" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-routeEcoOnlyInLayers" for command getNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] <CMD> setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DELC DELB DELA BUF8CK BUF8 BUF6CK BUF6 BUF4CK BUF4 BUF3CK BUF3 BUF2CK BUF2 BUF1S BUF1CK BUF12CK BUF1 INV8CK INV8 INV6CK INV6 INV4CK INV4 INV3CK INV3 INV2CK INV2 INV1S INV1CK INV12CK INV12 INV1} -maxAllowedDelay 1
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-modulePlan" for command getPlaceMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:45     43s] <CMD> setPlaceMode -reset
+[05/18 17:26:45     43s] <CMD> setPlaceMode -congEffort auto -timingDriven 1 -modulePlan 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 0 -moduleAwareSpare 0 -maxDensity 0.6 -preserveRouting 0 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+[05/18 17:26:45     43s] **WARN: (IMPTCM-77):	Option "-modulePlan" for command setPlaceMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/18 17:26:47     43s] <CMD> setPlaceMode -fp false
+[05/18 17:26:47     43s] <CMD> placeDesign
+[05/18 17:26:47     43s] [check_scan_connected]: number of scan connected with missing definition = 0, number of scan = 0, number of sequential = 3318, percentage of missing scan cell = 0.00% (0 / 3318)
+[05/18 17:26:47     44s] *** Starting placeDesign default flow ***
+[05/18 17:26:47     44s] *** Start deleteBufferTree ***
+[05/18 17:26:49     45s] Info: Detect buffers to remove automatically.
+[05/18 17:26:49     45s] Analyzing netlist ...
+[05/18 17:26:49     45s] Updating netlist
+[05/18 17:26:49     45s] AAE DB initialization (MEM=1102.83 CPU=0:00:00.1 REAL=0:00:00.0) 
+[05/18 17:26:49     45s] AAE_INFO: Cdb files are: 
+[05/18 17:26:49     45s]  	celtic/u18_ss.cdb
+[05/18 17:26:49     45s] 	celtic/u18_ff.cdb
+[05/18 17:26:49     45s]  
+[05/18 17:26:49     45s] Start AAE Lib Loading. (MEM=1102.83)
+[05/18 17:26:56     47s] **WARN: (IMPESI-3086):	The cell 'YA2GSD' does not have characterized noise model(s) for 'fsa0m_a_t33_generic_io_ss1p62v125c, fsa0m_a_t33_generic_io_ff1p98vm40c' lib(s). Missing noise information could compromise the accuracy of analysis.
+[05/18 17:26:56     47s] **WARN: (IMPESI-3086):	The cell 'XMD' does not have characterized noise model(s) for 'fsa0m_a_t33_generic_io_ss1p62v125c, fsa0m_a_t33_generic_io_ff1p98vm40c' lib(s). Missing noise information could compromise the accuracy of analysis.
+[05/18 17:26:56     47s] End AAE Lib Loading. (MEM=1370.54 CPU=0:00:01.4 Real=0:00:07.0)
+[05/18 17:26:56     47s] 
+[05/18 17:26:56     47s] *summary: 431 instances (buffers/inverters) removed
+[05/18 17:26:56     47s] *** Finish deleteBufferTree (0:00:03.3) ***
+[05/18 17:26:56     47s] **INFO: Enable pre-place timing setting for timing analysis
+[05/18 17:26:56     47s] Set Using Default Delay Limit as 101.
+[05/18 17:26:56     47s] **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+[05/18 17:26:56     47s] Set Default Net Delay as 0 ps.
+[05/18 17:26:56     47s] Set Default Net Load as 0 pF. 
+[05/18 17:26:56     47s] **INFO: Analyzing IO path groups for slack adjustment
+[05/18 17:26:57     48s] Effort level <high> specified for reg2reg_tmp.28887 path_group
+[05/18 17:26:58     48s] #################################################################################
+[05/18 17:26:58     48s] # Design Stage: PreRoute
+[05/18 17:26:58     48s] # Design Name: CPU
+[05/18 17:26:58     48s] # Design Mode: 90nm
+[05/18 17:26:58     48s] # Analysis Mode: MMMC Non-OCV 
+[05/18 17:26:58     48s] # Parasitics Mode: No SPEF/RCDB
+[05/18 17:26:58     48s] # Signoff Settings: SI Off 
+[05/18 17:26:58     48s] #################################################################################
+[05/18 17:26:58     48s] Calculate delays in BcWc mode...
+[05/18 17:26:58     48s] Calculate delays in BcWc mode...
+[05/18 17:26:58     48s] Topological Sorting (REAL = 0:00:00.0, MEM = 1386.7M, InitMEM = 1386.7M)
+[05/18 17:26:58     48s] Start delay calculation (fullDC) (1 T). (MEM=1386.7)
+[05/18 17:26:58     49s] End AAE Lib Interpolated Model. (MEM=1386.96 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/18 17:26:58     49s] First Iteration Infinite Tw... 
+[05/18 17:27:03     54s] Total number of fetched objects 19729
+[05/18 17:27:03     54s] End Timing Check Calculation. (CPU Time=0:00:00.2, Real Time=0:00:00.0)
+[05/18 17:27:03     54s] End delay calculation. (MEM=1449.61 CPU=0:00:04.8 REAL=0:00:04.0)
+[05/18 17:27:03     54s] End delay calculation (fullDC). (MEM=1352.23 CPU=0:00:05.7 REAL=0:00:05.0)
+[05/18 17:27:03     54s] *** CDM Built up (cpu=0:00:05.9  real=0:00:05.0  mem= 1352.2M) ***
+[05/18 17:27:06     57s] **INFO: Disable pre-place timing setting for timing analysis
+[05/18 17:27:06     57s] Set Using Default Delay Limit as 1000.
+[05/18 17:27:06     57s] Set Default Net Delay as 1000 ps.
+[05/18 17:27:06     57s] Set Default Net Load as 0.5 pF. 
+[05/18 17:27:06     57s] **INFO: Pre-place timing setting for timing analysis already disabled
+[05/18 17:27:06     57s] Deleted 0 physical inst  (cell - / prefix -).
+[05/18 17:27:06     57s] *** Starting "NanoPlace(TM) placement v#10 (mem=1337.8M)" ...
+[05/18 17:27:06     57s] total jobs 10678
+[05/18 17:27:06     57s] multi thread init TemplateIndex for each ta. thread num 1
+[05/18 17:27:06     57s] Wait...
+[05/18 17:27:12     63s] *** Build Buffered Sizing Timing Model
+[05/18 17:27:12     63s] (cpu=0:00:06.0 mem=1337.8M) ***
+[05/18 17:27:12     63s] **WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+[05/18 17:27:12     63s] **WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+[05/18 17:27:12     63s] **WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+[05/18 17:27:12     63s] **WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+[05/18 17:27:13     63s] *** Build Virtual Sizing Timing Model
+[05/18 17:27:13     63s] (cpu=0:00:06.4 mem=1337.8M) ***
+[05/18 17:27:13     63s] No user setting net weight.
+[05/18 17:27:13     63s] Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+[05/18 17:27:13     63s] **WARN: (IMPSP-9042):	Scan chains were not defined, -place_global_ignore_scan option will be ignored.
+[05/18 17:27:13     63s] Define the scan chains before using this option.
+[05/18 17:27:13     63s] Type 'man IMPSP-9042' for more detail.
+[05/18 17:27:13     63s] #std cell=17976 (0 fixed + 17976 movable) #block=0 (0 floating + 0 preplaced)
+[05/18 17:27:13     63s] #ioInst=330 #net=19157 #term=75047 #term/net=3.92, #fixedIo=330, #floatIo=0, #fixedPin=30, #floatPin=0
+[05/18 17:27:13     63s] stdCell: 17976 single + 0 double + 0 multi
+[05/18 17:27:13     63s] Total standard cell length = 95.5873 (mm), area = 0.4818 (mm^2)
+[05/18 17:27:13     63s] Core basic site is core_5040
+[05/18 17:27:13     63s] Estimated cell power/ground rail width = 0.866 um
+[05/18 17:27:13     63s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[05/18 17:27:13     63s] Apply auto density screen in pre-place stage.
+[05/18 17:27:13     63s] Skip auto density screen.
+[05/18 17:27:13     63s] Average module density = 1.090.
+[05/18 17:27:13     63s] Density for the design = 1.090.
+[05/18 17:27:13     63s]        = stdcell_area 154173 sites (481760 um^2) / alloc_area 141474 sites (442078 um^2).
+[05/18 17:27:13     63s] Pin Density = 0.3183.
+[05/18 17:27:13     63s]             = total # of pins 75047 / total area 235790.
+[05/18 17:27:13     63s] **ERROR: (IMPSP-190):	Design has util 109.0% > 100%, placer cannot proceed. The problem may be caused by option 'setPlaceMode -place_global_max_density' or density screens (softBlockages and partial blockages). Please correct this problem first.
+*** Free Virtual Timing Model ...(mem=1337.8M)
+[05/18 17:27:13     63s] 
+[05/18 17:27:13     63s] *** Summary of all messages that are not suppressed in this session:
+[05/18 17:27:13     63s] Severity  ID               Count  Summary                                  
+[05/18 17:27:13     63s] WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+[05/18 17:27:13     63s] WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+[05/18 17:27:13     63s] WARNING   IMPESI-3086          2  The cell '%s' does not have characterize...
+[05/18 17:27:13     63s] WARNING   IMPSP-9042           1  Scan chains were not defined, -place_glo...
+[05/18 17:27:13     63s] ERROR     IMPSP-190            1  Design has util %.1f%% > 100%%, placer c...
+[05/18 17:27:13     63s] *** Message Summary: 8 warning(s), 1 error(s)
+[05/18 17:27:13     63s] 
+[05/18 17:27:58     67s] <CMD> setDrawView place
+[05/18 17:28:04     68s] <CMD> setDrawView fplan
+[05/18 17:28:06     68s] <CMD> setDrawView place
+[05/18 17:29:05     73s] 
+[05/18 17:29:05     73s] *** Memory Usage v#1 (Current mem = 1337.812M, initial mem = 187.633M) ***
+[05/18 17:29:05     73s] 
+[05/18 17:29:05     73s] *** Summary of all messages that are not suppressed in this session:
+[05/18 17:29:05     73s] Severity  ID               Count  Summary                                  
+[05/18 17:29:05     73s] WARNING   IMPLF-58           392  MACRO '%s' has been found in the databas...
+[05/18 17:29:05     73s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[05/18 17:29:05     73s] WARNING   IMPLF-200            7  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[05/18 17:29:05     73s] WARNING   IMPLF-119           12  LAYER '%s' has been found in the databas...
+[05/18 17:29:05     73s] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[05/18 17:29:05     73s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[05/18 17:29:05     73s] WARNING   IMPFP-4026           4  Adjusting core to '%s' to %f due to trac...
+[05/18 17:29:05     73s] WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+[05/18 17:29:05     73s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[05/18 17:29:05     73s] WARNING   IMPVL-159          764  Pin '%s' of cell '%s' is defined in LEF ...
+[05/18 17:29:05     73s] WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+[05/18 17:29:05     73s] WARNING   IMPESI-3086          2  The cell '%s' does not have characterize...
+[05/18 17:29:05     73s] WARNING   IMPVFG-257           1  verifyGeometry command is replaced by ve...
+[05/18 17:29:05     73s] WARNING   IMPSR-4058           2  Sroute option: %s should be used in conj...
+[05/18 17:29:05     73s] WARNING   IMPSP-9042           1  Scan chains were not defined, -place_glo...
+[05/18 17:29:05     73s] ERROR     IMPSP-190            1  Design has util %.1f%% > 100%%, placer c...
+[05/18 17:29:05     73s] WARNING   IMPTCM-77           10  Option "%s" for command %s is obsolete a...
+[05/18 17:29:05     73s] WARNING   IMPTCM-125           1  Option "%s" for command %s is obsolete a...
+[05/18 17:29:05     73s] WARNING   TCLCMD-1014          2  The SDC set_operating_conditions asserti...
+[05/18 17:29:05     73s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[05/18 17:29:05     73s] WARNING   TECHLIB-436          8  Attribute '%s' on '%s' pin '%s' of cell ...
+[05/18 17:29:05     73s] *** Message Summary: 1224 warning(s), 1 error(s)
+[05/18 17:29:05     73s] 
+[05/18 17:29:05     73s] --- Ending "Innovus" (totcpu=0:01:13, real=0:07:53, mem=1337.8M) ---

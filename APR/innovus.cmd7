@@ -1,0 +1,73 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu May 18 21:32:19 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+#@(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+#@(#)CDS: CPE v17.11-s095
+#@(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/raid7_2/userb08/b08034/ICDLab/Final_Project/APR/DBS/place.dat CPU
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+verify_drc
+setDrawView place
+zoomBox 173.173 356.788 885.447 151.063
+zoomBox 216.934 333.998 844.480 193.405
+zoomBox 419.553 307.179 506.508 218.584
+zoomBox 455.699 250.719 461.837 242.762
+gui_select -rect {459.059 246.124 457.512 246.138}
+pan 6.653 0.887
+pan 3.266 1.883
+pan 1.561 -0.808
+pan 0.920 0.074
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+gui_select -rect {445.030 243.174 445.373 243.481}
+pan 1.064 1.114
+fit
+zoomBox 196.462 335.439 910.678 184.057
+zoomBox 379.451 171.988 444.804 95.431
+zoomBox 395.682 146.439 429.427 136.272
+zoomBox 399.520 141.532 415.885 137.253
+zoomBox 400.410 141.376 408.364 138.155
+zoomBox 403.956 139.692 405.037 138.445
+pan -139.619 -114.134
+pan -341.019 -198.477
+zoomBox 882.629 294.131 945.781 232.784
+zoomBox 902.111 265.026 905.578 260.403
+selectInst Instruction_Memory/U1783
+violationBrowserClose
+fit
+deselectAll
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+zoomBox 815.59 138.41 816.87 139.69
+redraw
+violationBrowserClose
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+zoomBox 815.59 138.41 816.87 139.69

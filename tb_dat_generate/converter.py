@@ -47,6 +47,10 @@ TYPE = {
     'addi': 'I'
 }
 
+def bindigits(n, bits):
+    s = bin(n & int("1"*bits, 2))[2:]
+    return ("{0:0>%s}" % (bits)).format(s)
+
 def convert_to_binary(inst_list):
     if(TYPE[inst_list[0]] == 'R'):
         funct7 = FUNCT7[inst_list[0]]
@@ -61,8 +65,11 @@ def convert_to_binary(inst_list):
         inst_binary = funct7 + rs2_bin + rs1_bin + funct3 + rd_bin + opcode
         return inst_binary
     elif(TYPE[inst_list[0]] == 'I'):
-        imm = int(inst_list[3])
-        imm_bin = '{0:012b}'.format(imm)
+        if(int(inst_list[3]) < 0):
+            imm_bin = bindigits(int(inst_list[3]), 12)
+        else:
+            imm = int(inst_list[3])
+            imm_bin = '{0:012b}'.format(imm)
         funct3 = FUNCT3[inst_list[0]]
         opcode = OPCODE[inst_list[0]]
         rd = int(inst_list[1].replace('r',''))
