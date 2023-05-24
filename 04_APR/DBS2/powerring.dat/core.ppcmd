@@ -1,0 +1,58 @@
+# PPCMD 1 
+# sroute -connect { padPin floatingStripe } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort allGeom } -padPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { VDD VSS } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+# 3 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addRing -nets {VDD VSS} -type core_rings -follow core -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 8 bottom 8 left 8 right 8} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 4 -use_interleaving_wire_group 1
+# 2 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VSS 8000 3 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 638600 151400 638600 167960 638600 184520 638600 201080 638600 1071580 638600 1088140 638600 1104700 638600 1121260 
+# END_RING_PT_INFO_LIST 
+# VSS 8000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 151440 636330 168000 636330 184560 636330 201120 636330 1076080 636330 1092640 636330 1109200 636330 1125760 636330 
+# END_RING_PT_INFO_LIST 
+# VDD 8000 3 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 638600 159680 638600 176240 638600 192800 638600 209360 638600 1063300 638600 1079860 638600 1096420 638600 1112980 
+# END_RING_PT_INFO_LIST 
+# VDD 8000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 159720 636330 176280 636330 192840 636330 209400 636330 1067800 636330 1084360 636330 1100920 636330 1117480 636330 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+# 1 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+

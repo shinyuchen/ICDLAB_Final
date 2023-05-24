@@ -1,0 +1,18 @@
+catch { setAnalysisMode -analysisType single }
+setExtractRCMode  -engine preRoute
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setSrouteMode -viaConnectToShape ring }
+catch { setDelayCalMode -engine aae }
+catch { setAddRingMode -avoid_short false }
+catch { setAddRingMode -extend_over_row false }
+catch { setAddRingMode -ignore_rows false }
+catch { setAddRingMode -orthogonal_only true }
+catch { setAddRingMode -ring_target default }
+catch { setAddRingMode -skip_crossing_trunks none }
+catch { setAddRingMode -skip_via_on_pin standardcell }
+catch { setAddRingMode -skip_via_on_wire_shape noshape }
+catch { setAddRingMode -stacked_via_bottom_layer metal1 }
+catch { setAddRingMode -stacked_via_top_layer metal6 }
+catch { setAddRingMode -via_using_exact_crossover_size true }

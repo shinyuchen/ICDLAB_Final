@@ -1,0 +1,6 @@
+catch { setAnalysisMode -analysisType single }
+setExtractRCMode  -engine preRoute
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setDelayCalMode -engine aae }
